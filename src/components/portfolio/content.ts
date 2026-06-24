@@ -124,7 +124,7 @@ export const COPY = {
     },
     footer: `Feito por Leonardo José Alves Gouvea · 2026`,
   },
-} as const;
+};
 
 /* ---------- Skill chips ---------- */
 export const SKILLS = {
