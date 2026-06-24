@@ -62,26 +62,39 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --radius: 0.25rem;
+  /* Persona-inspired dark navy w/ cyan + crimson accents */
+  --background: oklch(0.18 0.08 260);
+  --foreground: oklch(0.97 0.02 220);
+  --card: oklch(0.14 0.07 265);
+  --card-foreground: oklch(0.97 0.02 220);
+  --popover: oklch(0.14 0.07 265);
+  --popover-foreground: oklch(0.97 0.02 220);
+  --primary: oklch(0.78 0.17 220);            /* cyan/blue */
+  --primary-foreground: oklch(0.12 0.06 265);
+  --secondary: oklch(0.22 0.09 265);
+  --secondary-foreground: oklch(0.97 0.02 220);
+  --muted: oklch(0.25 0.06 260);
+  --muted-foreground: oklch(0.75 0.04 230);
+  --accent: oklch(0.55 0.22 20);               /* royal crimson */
+  --accent-foreground: oklch(0.98 0.02 220);
+  --destructive: oklch(0.55 0.22 20);
+  --destructive-foreground: oklch(0.98 0.02 220);
+  --border: oklch(0.35 0.08 240);
+  --input: oklch(0.25 0.06 260);
+  --ring: oklch(0.78 0.17 220);
+  --crimson: oklch(0.55 0.22 20);
+  --crimson-deep: oklch(0.42 0.20 22);
+  --cyan: oklch(0.82 0.15 215);
+  --navy-deep: oklch(0.13 0.08 268);
+  --gradient-hero: linear-gradient(135deg, oklch(0.13 0.08 268), oklch(0.20 0.10 250));
+  --gradient-accent: linear-gradient(135deg, var(--cyan), oklch(0.65 0.18 210));
+  --gradient-crimson: linear-gradient(135deg, var(--crimson), var(--crimson-deep));
+  --shadow-glow: 0 0 40px -8px oklch(0.78 0.17 220 / 0.5);
+  --shadow-crimson: 0 0 30px -6px oklch(0.55 0.22 20 / 0.55);
+  --font-display: "Bebas Neue", "Oswald", system-ui, sans-serif;
+  --font-ui: "Rajdhani", "Oswald", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +153,81 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-ui);
+    background-image:
+      radial-gradient(ellipse at top, oklch(0.25 0.14 255 / 0.6), transparent 60%),
+      radial-gradient(ellipse at bottom right, oklch(0.40 0.22 22 / 0.18), transparent 55%);
+    background-attachment: fixed;
   }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+}
+
+/* === Persona-style game UI utilities === */
+@utility skew-tab {
+  transform: skewX(-12deg);
+}
+@utility skew-tab-inner {
+  transform: skewX(12deg);
+}
+
+@utility persona-panel {
+  position: relative;
+  background: linear-gradient(135deg, oklch(0.10 0.06 268 / 0.95), oklch(0.18 0.09 258 / 0.92));
+  border: 1px solid oklch(0.78 0.17 220 / 0.35);
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+@utility crimson-bar {
+  background: var(--gradient-crimson);
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+@utility cyan-bar {
+  background: var(--gradient-accent);
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+@utility scanlines {
+  position: relative;
+}
+@utility scanlines {
+  &::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent 0 2px, oklch(1 0 0 / 0.03) 2px 3px);
+    pointer-events: none;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+@utility font-ui {
+  font-family: var(--font-ui);
+}
+@utility font-mono {
+  font-family: var(--font-mono);
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+@utility animate-glitch {
+  animation: glitch 2.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.17 220 / 0.6); }
+  50% { box-shadow: 0 0 30px 6px oklch(0.78 0.17 220 / 0); }
+}
+@utility animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
 }
