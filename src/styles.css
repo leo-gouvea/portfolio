@@ -104,7 +104,7 @@
   --gradient-accent: linear-gradient(135deg, #ff002b, #8a0017);
   --shadow-glow: 0 0 40px -8px rgba(255, 0, 43, 0.45);
   --shadow-soft: 0 12px 40px -12px rgba(0, 0, 0, 0.8);
-  --font-display: "Bebas Neue", "Oswald", system-ui, sans-serif;
+  --font-display: "Bowlby One", "Bebas Neue", "Oswald", system-ui, sans-serif;
   --font-ui: "Rajdhani", "Oswald", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --chart-1: oklch(0.646 0.222 41.116);
@@ -175,7 +175,9 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
+    font-weight: 400;
+    text-transform: none;
   }
 
   a {
