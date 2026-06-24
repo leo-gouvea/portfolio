@@ -1,29 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { LangProvider } from "@/lib/i18n";
+import Portfolio from "@/components/portfolio/Portfolio";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Leonardo Gouvea — Full-Stack Dev & Data Analyst" },
+      { name: "description", content: "Game-inspired portfolio: Full-Stack Developer & Data Analyst. From code to insight." },
+      { property: "og:title", content: "Leonardo Gouvea — Dev & Data" },
+      { property: "og:description", content: "From code to insight." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <LangProvider>
+      <Portfolio />
+    </LangProvider>
   );
 }
