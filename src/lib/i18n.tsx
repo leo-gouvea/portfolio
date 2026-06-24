@@ -14,10 +14,12 @@ const en: Dict = {
   tab_dev: "DEV",
   tab_data: "DATA & ANALYTICS",
   hero_title: "Full-Stack Developer & Data Analyst",
-  hero_sub: "from code to insight.",
+  hero_sub: "from code to insight",
   hero_cta_dev: "SEE DEV PROJECTS",
   hero_cta_data: "SEE DATA PROJECTS",
   hero_location: "São Bernardo do Campo · Brazil",
+  hero_eyebrow: "PORTFOLIO · 2026",
+  hero_lede: "Building production-grade web systems, AI-driven automations and decision-ready dashboards.",
   section_projects: "PROJECTS",
   section_about: "ABOUT ME",
   section_skills: "SKILLS",
@@ -26,8 +28,8 @@ const en: Dict = {
   section_contact: "CONTACT",
   about_body:
     "Full-stack developer and automation engineer with hands-on experience in React, Python, Java, SQL and AI-powered automation with n8n and LLMs. Currently expanding into data analysis and Power BI. Interned at Cafezinho delivering a full automation pipeline in production. Working at Grupo Casas Bahia in logistics operations. Studying Systems Analysis & Development at FSA. C1 Advanced English.",
-  skills_dev: "DEV ARSENAL",
-  skills_data: "DATA ARSENAL",
+  skills_dev: "DEVELOPMENT",
+  skills_data: "DATA & BI",
   edu_title: "Systems Analysis & Development",
   edu_school: "FSA — Fundação Santo André",
   edu_status: "In progress",
@@ -46,10 +48,6 @@ const en: Dict = {
   more_soon: "More coming soon — currently learning.",
   metric_deliveries: "1,755 deliveries analyzed",
   footer: "Built by Leonardo José Alves Gouvea · 2026",
-  press_start: "PRESS START",
-  rank: "RANK",
-  status: "STATUS",
-  party: "PARTY",
 };
 
 const pt: Dict = {
@@ -62,10 +60,12 @@ const pt: Dict = {
   tab_dev: "DEV",
   tab_data: "DADOS & ANALYTICS",
   hero_title: "Desenvolvedor Full-Stack & Analista de Dados",
-  hero_sub: "do código ao insight.",
+  hero_sub: "do código ao insight",
   hero_cta_dev: "VER PROJETOS DEV",
   hero_cta_data: "VER PROJETOS DE DADOS",
   hero_location: "São Bernardo do Campo · Brasil",
+  hero_eyebrow: "PORTFÓLIO · 2026",
+  hero_lede: "Construindo sistemas web de produção, automações com IA e dashboards prontos para decisão.",
   section_projects: "PROJETOS",
   section_about: "SOBRE MIM",
   section_skills: "HABILIDADES",
@@ -74,8 +74,8 @@ const pt: Dict = {
   section_contact: "CONTATO",
   about_body:
     "Desenvolvedor full-stack e engenheiro de automação com experiência prática em React, Python, Java, SQL e automações com IA usando n8n e LLMs. Expandindo atualmente para análise de dados e Power BI. Estagiou no Cafezinho entregando um pipeline completo de automação em produção. Atua no Grupo Casas Bahia em operações logísticas. Cursando Análise e Desenvolvimento de Sistemas na FSA. Inglês C1 Avançado.",
-  skills_dev: "ARSENAL DEV",
-  skills_data: "ARSENAL DADOS",
+  skills_dev: "DESENVOLVIMENTO",
+  skills_data: "DADOS & BI",
   edu_title: "Análise e Desenvolvimento de Sistemas",
   edu_school: "FSA — Fundação Santo André",
   edu_status: "Em andamento",
@@ -94,10 +94,6 @@ const pt: Dict = {
   more_soon: "Mais em breve — aprendendo agora.",
   metric_deliveries: "1.755 entregas analisadas",
   footer: "Feito por Leonardo José Alves Gouvea · 2026",
-  press_start: "APERTE START",
-  rank: "RANK",
-  status: "STATUS",
-  party: "PARTY",
 };
 
 const dicts: Record<Lang, Dict> = { en, pt };

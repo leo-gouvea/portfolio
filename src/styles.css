@@ -63,35 +63,47 @@
 
 :root {
   --radius: 0.25rem;
-  /* Persona-inspired dark navy w/ cyan + crimson accents */
-  --background: oklch(0.18 0.08 260);
-  --foreground: oklch(0.97 0.02 220);
-  --card: oklch(0.14 0.07 265);
-  --card-foreground: oklch(0.97 0.02 220);
-  --popover: oklch(0.14 0.07 265);
-  --popover-foreground: oklch(0.97 0.02 220);
-  --primary: oklch(0.78 0.17 220);            /* cyan/blue */
-  --primary-foreground: oklch(0.12 0.06 265);
-  --secondary: oklch(0.22 0.09 265);
-  --secondary-foreground: oklch(0.97 0.02 220);
-  --muted: oklch(0.25 0.06 260);
-  --muted-foreground: oklch(0.75 0.04 230);
-  --accent: oklch(0.55 0.22 20);               /* royal crimson */
-  --accent-foreground: oklch(0.98 0.02 220);
-  --destructive: oklch(0.55 0.22 20);
-  --destructive-foreground: oklch(0.98 0.02 220);
-  --border: oklch(0.35 0.08 240);
-  --input: oklch(0.25 0.06 260);
-  --ring: oklch(0.78 0.17 220);
-  --crimson: oklch(0.55 0.22 20);
-  --crimson-deep: oklch(0.42 0.20 22);
-  --cyan: oklch(0.82 0.15 215);
-  --navy-deep: oklch(0.13 0.08 268);
-  --gradient-hero: linear-gradient(135deg, oklch(0.13 0.08 268), oklch(0.20 0.10 250));
-  --gradient-accent: linear-gradient(135deg, var(--cyan), oklch(0.65 0.18 210));
-  --gradient-crimson: linear-gradient(135deg, var(--crimson), var(--crimson-deep));
-  --shadow-glow: 0 0 40px -8px oklch(0.78 0.17 220 / 0.5);
-  --shadow-crimson: 0 0 30px -6px oklch(0.55 0.22 20 / 0.55);
+  /* =========================================================
+   * MIDNIGHT BLUES palette + crimson accent (FFXIV-style).
+   * Edit color values here to retheme the whole site.
+   *   --ink-black    #0C1821
+   *   --deep-space   #1B2A41
+   *   --charcoal     #324A5F
+   *   --lavender     #CCC9DC
+   *   --accent       #ff002b   (links, hrs, detail accents)
+   * ========================================================= */
+  --black: #000000;
+  --ink-black: #0C1821;
+  --deep-space: #1B2A41;
+  --charcoal: #324A5F;
+  --lavender: #CCC9DC;
+  --accent-red: #ff002b;
+
+  --background: #0C1821;
+  --foreground: #ECECF2;
+  --card: #122033;
+  --card-foreground: #ECECF2;
+  --popover: #122033;
+  --popover-foreground: #ECECF2;
+  --primary: #CCC9DC;                 /* soft lavender for primary surfaces */
+  --primary-foreground: #0C1821;
+  --secondary: #1B2A41;
+  --secondary-foreground: #ECECF2;
+  --muted: #1B2A41;
+  --muted-foreground: #8A92A8;
+  --accent: #ff002b;                  /* crimson detail */
+  --accent-foreground: #ffffff;
+  --destructive: #ff002b;
+  --destructive-foreground: #ffffff;
+  --border: rgba(204, 201, 220, 0.18);
+  --input: #1B2A41;
+  --ring: #ff002b;
+
+  --gradient-hero: linear-gradient(135deg, #000000 0%, #0C1821 45%, #1B2A41 100%);
+  --gradient-panel: linear-gradient(150deg, rgba(27,42,65,0.95), rgba(12,24,33,0.95));
+  --gradient-accent: linear-gradient(135deg, #ff002b, #8a0017);
+  --shadow-glow: 0 0 40px -8px rgba(255, 0, 43, 0.45);
+  --shadow-soft: 0 12px 40px -12px rgba(0, 0, 0, 0.8);
   --font-display: "Bebas Neue", "Oswald", system-ui, sans-serif;
   --font-ui: "Rajdhani", "Oswald", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -155,14 +167,24 @@
     color: var(--color-foreground);
     font-family: var(--font-ui);
     background-image:
-      radial-gradient(ellipse at top, oklch(0.25 0.14 255 / 0.6), transparent 60%),
-      radial-gradient(ellipse at bottom right, oklch(0.40 0.22 22 / 0.18), transparent 55%);
+      radial-gradient(ellipse at top, rgba(50, 74, 95, 0.55), transparent 65%),
+      radial-gradient(ellipse at bottom right, rgba(255, 0, 43, 0.10), transparent 60%),
+      linear-gradient(180deg, #000000 0%, #0C1821 40%, #1B2A41 100%);
     background-attachment: fixed;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     letter-spacing: 0.02em;
+  }
+
+  a {
+    color: var(--accent-red);
+  }
+  hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-red), transparent);
   }
 }
 
@@ -176,18 +198,18 @@
 
 @utility persona-panel {
   position: relative;
-  background: linear-gradient(135deg, oklch(0.10 0.06 268 / 0.95), oklch(0.18 0.09 258 / 0.92));
-  border: 1px solid oklch(0.78 0.17 220 / 0.35);
+  background: var(--gradient-panel);
+  border: 1px solid rgba(204, 201, 220, 0.15);
   clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
 }
 
 @utility crimson-bar {
-  background: var(--gradient-crimson);
+  background: var(--gradient-accent);
   clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
 }
 
 @utility cyan-bar {
-  background: var(--gradient-accent);
+  background: linear-gradient(135deg, var(--lavender), #8e93ad);
   clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
 }
 
@@ -225,8 +247,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.17 220 / 0.6); }
-  50% { box-shadow: 0 0 30px 6px oklch(0.78 0.17 220 / 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 0, 43, 0.55); }
+  50% { box-shadow: 0 0 30px 6px rgba(255, 0, 43, 0); }
 }
 @utility animate-pulse-glow {
   animation: pulse-glow 2s infinite;
