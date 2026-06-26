@@ -64,47 +64,47 @@
 :root {
   --radius: 0.25rem;
   /* =========================================================
-   * MIDNIGHT BLUES palette + crimson accent (FFXIV-style).
-   * Edit color values here to retheme the whole site.
-   *   --ink-black    #0C1821
-   *   --deep-space   #1B2A41
-   *   --charcoal     #324A5F
-   *   --lavender     #CCC9DC
-   *   --accent       #ff002b   (links, hrs, detail accents)
+   * DEEP SEA palette + crimson accent.
+   *   --abyss        #0d1b2a   (background)
+   *   --midnight     #1b263b   (panels)
+   *   --steel-blue   #415a77   (borders / mid surfaces)
+   *   --fog-blue     #778da9   (muted text / soft surfaces)
+   *   --sand         #e0e1dd   (foreground / primary)
+   *   --accent-red   #ff002b   (links, hrs, detail accents)
    * ========================================================= */
-  --black: #000000;
-  --ink-black: #0C1821;
-  --deep-space: #1B2A41;
-  --charcoal: #324A5F;
-  --lavender: #CCC9DC;
+  --abyss: #0d1b2a;
+  --midnight: #1b263b;
+  --steel-blue: #415a77;
+  --fog-blue: #778da9;
+  --sand: #e0e1dd;
   --accent-red: #ff002b;
 
-  --background: #0C1821;
-  --foreground: #ECECF2;
-  --card: #122033;
-  --card-foreground: #ECECF2;
-  --popover: #122033;
-  --popover-foreground: #ECECF2;
-  --primary: #CCC9DC;                 /* soft lavender for primary surfaces */
-  --primary-foreground: #0C1821;
-  --secondary: #1B2A41;
-  --secondary-foreground: #ECECF2;
-  --muted: #1B2A41;
-  --muted-foreground: #8A92A8;
-  --accent: #ff002b;                  /* crimson detail */
+  --background: #0d1b2a;
+  --foreground: #e0e1dd;
+  --card: #1b263b;
+  --card-foreground: #e0e1dd;
+  --popover: #1b263b;
+  --popover-foreground: #e0e1dd;
+  --primary: #e0e1dd;
+  --primary-foreground: #0d1b2a;
+  --secondary: #1b263b;
+  --secondary-foreground: #e0e1dd;
+  --muted: #1b263b;
+  --muted-foreground: #778da9;
+  --accent: #ff002b;
   --accent-foreground: #ffffff;
   --destructive: #ff002b;
   --destructive-foreground: #ffffff;
-  --border: rgba(204, 201, 220, 0.18);
-  --input: #1B2A41;
+  --border: rgba(65, 90, 119, 0.45);
+  --input: #1b263b;
   --ring: #ff002b;
 
-  --gradient-hero: linear-gradient(135deg, #000000 0%, #0C1821 45%, #1B2A41 100%);
-  --gradient-panel: linear-gradient(150deg, rgba(27,42,65,0.95), rgba(12,24,33,0.95));
+  --gradient-hero: linear-gradient(135deg, #000000 0%, #0d1b2a 45%, #1b263b 100%);
+  --gradient-panel: linear-gradient(150deg, rgba(27,38,59,0.95), rgba(13,27,42,0.95));
   --gradient-accent: linear-gradient(135deg, #ff002b, #8a0017);
   --shadow-glow: 0 0 40px -8px rgba(255, 0, 43, 0.45);
   --shadow-soft: 0 12px 40px -12px rgba(0, 0, 0, 0.8);
-  --font-display: "Bowlby One", "Bebas Neue", "Oswald", system-ui, sans-serif;
+  --font-display: "Bebas Neue", "Oswald", system-ui, sans-serif;
   --font-ui: "Rajdhani", "Oswald", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --chart-1: oklch(0.646 0.222 41.116);
@@ -167,17 +167,16 @@
     color: var(--color-foreground);
     font-family: var(--font-ui);
     background-image:
-      radial-gradient(ellipse at top, rgba(50, 74, 95, 0.55), transparent 65%),
+      radial-gradient(ellipse at top, rgba(65, 90, 119, 0.55), transparent 65%),
       radial-gradient(ellipse at bottom right, rgba(255, 0, 43, 0.10), transparent 60%),
-      linear-gradient(180deg, #000000 0%, #0C1821 40%, #1B2A41 100%);
+      linear-gradient(180deg, #000000 0%, #0d1b2a 40%, #1b263b 100%);
     background-attachment: fixed;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: 0;
-    font-weight: 400;
-    text-transform: none;
+    letter-spacing: 0.02em;
+    font-weight: 700;
   }
 
   a {
@@ -211,7 +210,7 @@
 }
 
 @utility cyan-bar {
-  background: linear-gradient(135deg, var(--lavender), #8e93ad);
+  background: linear-gradient(135deg, var(--sand), var(--fog-blue));
   clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
 }
 
