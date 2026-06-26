@@ -79,6 +79,12 @@
   --sand: #e0e1dd;
   --accent-red: #ff002b;
 
+  /* Legacy aliases (kept so existing components keep working) */
+  --ink-black: var(--abyss);
+  --deep-space: var(--midnight);
+  --charcoal: var(--steel-blue);
+  --lavender: var(--sand);
+
   --background: #0d1b2a;
   --foreground: #e0e1dd;
   --card: #1b263b;
