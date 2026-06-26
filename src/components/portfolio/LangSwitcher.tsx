@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { useLang, type Lang } from "@/lib/i18n";
 
 /* Tiny inline SVG flags so we don't ship image assets. */
@@ -24,7 +25,7 @@ function FlagBR() {
 
 export function LangSwitcher() {
   const { lang, setLang, t } = useLang();
-  const langs: { id: Lang; label: string; flag: JSX.Element }[] = [
+  const langs: { id: Lang; label: string; flag: ReactNode }[] = [
     { id: "en", label: "English",   flag: <FlagUS /> },
     { id: "pt", label: "Português", flag: <FlagBR /> },
   ];
