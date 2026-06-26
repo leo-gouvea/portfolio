@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LangProvider } from "@/lib/i18n";
+import { ThemeProvider } from "@/lib/theme";
 import Portfolio from "@/components/portfolio/Portfolio";
 
 export const Route = createFileRoute("/")({
@@ -16,8 +17,10 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <LangProvider>
-      <Portfolio />
-    </LangProvider>
+    <ThemeProvider>
+      <LangProvider>
+        <Portfolio />
+      </LangProvider>
+    </ThemeProvider>
   );
 }
