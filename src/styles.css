@@ -1,0 +1,206 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================================
+   DESIGN SYSTEM — EDIT HERE FOR COLORS / FONTS / ANIMATIONS
+   -------------------------------------------------------------------------
+   1. PALETTES  -> :root[data-theme="..."] blocks below
+        p3 = blue (default), p4 = yellow, p5 = red, p6 = green
+      Tokens used by every component:
+        --bg          page background
+        --surface     card / panel background
+        --surface-2   darker panel background
+        --primary     main accent (links, headings, cyan-style)
+        --secondary   alternate accent (was crimson, now magenta in P3)
+        --text        main text
+        --text-dim    secondary text
+        --border      borders & dividers
+
+   2. FONTS     -> --font-display, --font-ui, --font-mono below
+        Loaded via <link> in src/routes/__root.tsx
+
+   3. ANIMATIONS-> @keyframes / @utility blocks at the bottom of this file
+   ========================================================================= */
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--text);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--text);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--bg);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--text);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--text-dim);
+  --color-accent: var(--secondary);
+  --color-accent-foreground: var(--text);
+  --color-destructive: var(--secondary);
+  --color-destructive-foreground: var(--text);
+  --color-border: var(--border);
+  --color-input: var(--surface-2);
+  --color-ring: var(--primary);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+/* ---------- FONTS (loaded in src/routes/__root.tsx) ---------- */
+:root {
+  --radius: 0.25rem;
+  --font-display: "Bebas Neue", "Oswald", system-ui, sans-serif;
+  --font-ui: "Rajdhani", "Oswald", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ---------- PALETTE: P3 BLUE (default) ---------- */
+:root,
+:root[data-theme="p3"] {
+  --bg:        oklch(0.16 0.07 260);
+  --surface:   oklch(0.20 0.09 258 / 0.92);
+  --surface-2: oklch(0.12 0.07 268);
+  --primary:   oklch(0.82 0.15 215);          /* cyan */
+  --secondary: oklch(0.70 0.22 330);          /* magenta — replaces old red */
+  --text:      oklch(0.97 0.02 220);
+  --text-dim:  oklch(0.75 0.04 230);
+  --border:    oklch(0.78 0.17 220 / 0.35);
+  --halo-1: oklch(0.25 0.14 255 / 0.55);
+  --halo-2: oklch(0.45 0.22 330 / 0.20);
+}
+
+/* ---------- PALETTE: P4 YELLOW ---------- */
+:root[data-theme="p4"] {
+  --bg:        oklch(0.92 0.18 100);
+  --surface:   oklch(0.96 0.16 102 / 0.92);
+  --surface-2: oklch(0.88 0.18 100);
+  --primary:   oklch(0.20 0.04 100);          /* near black */
+  --secondary: oklch(0.55 0.20 35);           /* warm orange */
+  --text:      oklch(0.18 0.03 100);
+  --text-dim:  oklch(0.35 0.05 100);
+  --border:    oklch(0.20 0.04 100 / 0.4);
+  --halo-1: oklch(0.98 0.18 100 / 0.5);
+  --halo-2: oklch(0.60 0.20 40 / 0.25);
+}
+
+/* ---------- PALETTE: P5 RED ---------- */
+:root[data-theme="p5"] {
+  --bg:        oklch(0.14 0.02 25);
+  --surface:   oklch(0.18 0.04 25 / 0.94);
+  --surface-2: oklch(0.10 0.02 25);
+  --primary:   oklch(0.60 0.25 25);           /* hot red */
+  --secondary: oklch(0.98 0 0);               /* white */
+  --text:      oklch(0.97 0 0);
+  --text-dim:  oklch(0.75 0.03 25);
+  --border:    oklch(0.60 0.25 25 / 0.45);
+  --halo-1: oklch(0.35 0.22 25 / 0.6);
+  --halo-2: oklch(0.20 0.03 25 / 0.6);
+}
+
+/* ---------- PALETTE: P6 GREEN ---------- */
+:root[data-theme="p6"] {
+  --bg:        oklch(0.14 0.04 150);
+  --surface:   oklch(0.18 0.06 150 / 0.92);
+  --surface-2: oklch(0.10 0.04 150);
+  --primary:   oklch(0.78 0.22 145);          /* toxic green */
+  --secondary: oklch(0.85 0.18 120);          /* lime */
+  --text:      oklch(0.96 0.04 150);
+  --text-dim:  oklch(0.70 0.05 150);
+  --border:    oklch(0.78 0.22 145 / 0.4);
+  --halo-1: oklch(0.30 0.18 145 / 0.5);
+  --halo-2: oklch(0.50 0.20 120 / 0.2);
+}
+
+/* ---------- BASE ---------- */
+@layer base {
+  * { border-color: var(--border); }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-ui);
+    background-image:
+      radial-gradient(ellipse at top, var(--halo-1), transparent 60%),
+      radial-gradient(ellipse at bottom right, var(--halo-2), transparent 55%);
+    background-attachment: fixed;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+}
+
+.coin-spin {
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+.coin-spin:hover {
+  transform: rotateY(360deg) scale(1.05);
+}
+
+/* ---------- REUSABLE GAME-UI UTILITIES ---------- */
+@utility font-display { font-family: var(--font-display); }
+@utility font-ui      { font-family: var(--font-ui); }
+@utility font-mono    { font-family: var(--font-mono); }
+
+@utility skew-tab       { transform: skewX(-12deg); }
+@utility skew-tab-inner { transform: skewX(12deg); }
+
+@utility panel {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+@utility scanlines {
+  position: relative;
+}
+@utility scanlines {
+  &::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent 0 2px, oklch(1 0 0 / 0.025) 2px 3px);
+    pointer-events: none;
+  }
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@utility anim-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@utility anim-fade-in {
+  animation: fade-in 0.5s ease-out both;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--primary); }
+  50%      { box-shadow: 0 0 24px 2px transparent; }
+}
+@utility anim-pulse {
+  animation: pulse-glow 2.4s infinite;
+}
+
