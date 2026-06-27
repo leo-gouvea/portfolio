@@ -18,6 +18,9 @@ export const profile = {
   email: "leonardo.j.gouvea@outlook.com",
   phone: "+55 (11) 94268-2040",
   phoneHref: "tel:+5511942682040",
+  /* WhatsApp deep-link. wa.me uses international format, digits only. */
+  whatsapp: "+55 (11) 94268-2040",
+  whatsappHref: "https://wa.me/5511942682040",
   github: "https://github.com/leo-gouvea",
   githubHandle: "leo-gouvea",
   linkedin: "https://linkedin.com/in/leonardo-gouvea-ti/",
@@ -30,6 +33,10 @@ export type Project = {
   tags: string[];
   repo?: string;
   demo?: string;
+  /* Optional preview image (relative URL, asset import, or remote URL).
+     Leave empty to render the placeholder icon panel.
+     Add your screenshots here when ready. */
+  image?: string;
 };
 
 export const projects: { dev: Project[]; data: Project[] } = {
@@ -73,3 +80,63 @@ export const skills = {
   dev: ["Python", "Java", "JavaScript", "React", "PHP", "Node.js", "SQL", "n8n", "REST APIs"],
   data: ["Power BI", "DAX", "Excel Advanced", "ERP TOTVS RM"],
 };
+
+/* =============================================================
+   EDUCATION — order matters (rendered top-down).
+   Each entry references i18n keys defined in src/lib/i18n.tsx
+   so titles/orgs/descriptions translate, while `date` stays
+   identical in both languages (locale-neutral months).
+   ============================================================= */
+export type EducationItem = {
+  titleKey: string;
+  orgKey: string;
+  date: string;
+  descKey?: string;
+};
+
+export const education: EducationItem[] = [
+  { titleKey: "edu_ads_title",   orgKey: "edu_ads_org",   date: "Feb 2025 – Dec 2026" },
+  { titleKey: "edu_prati_title", orgKey: "edu_prati_org", date: "Apr 2025 – Dec 2026" },
+  { titleKey: "edu_etec_title",  orgKey: "edu_etec_org",  date: "Feb 2022 – Dec 2024" },
+  { titleKey: "edu_proa_title",  orgKey: "edu_proa_org",  date: "Sep 2024 – Nov 2024", descKey: "edu_proa_desc" },
+  { titleKey: "edu_wizard_title",orgKey: "edu_wizard_org",date: "Feb 2022 – Dec 2023" },
+];
+
+/* =============================================================
+   EXPERIENCE — same pattern as education.
+   `descKey` text supports multi-line bullets (split on `\n`).
+   ============================================================= */
+export type ExperienceItem = {
+  roleKey: string;
+  orgKey: string;
+  descKey: string;
+};
+
+export const experience: ExperienceItem[] = [
+  { roleKey: "exp_cb_role",    orgKey: "exp_cb_org",    descKey: "exp_cb_desc" },
+  { roleKey: "exp_mesc_role",  orgKey: "exp_mesc_org",  descKey: "exp_mesc_desc" },
+  { roleKey: "exp_cafe_role",  orgKey: "exp_cafe_org",  descKey: "exp_cafe_desc" },
+];
+
+/* =============================================================
+   LANGUAGES — rendered in the new Languages section.
+   `badgeUrl` is an optional external certificate link
+   (e.g. EFSET / Cambridge). Add or remove entries freely.
+   ============================================================= */
+export type LanguageItem = {
+  nameKey: string;
+  levelKey: string;
+  badgeUrl?: string;
+  badgeLabelKey?: string;
+};
+
+export const languages: LanguageItem[] = [
+  { nameKey: "lang_pt_name", levelKey: "lang_pt_level" },
+  {
+    nameKey: "lang_en_name",
+    levelKey: "lang_en_level",
+    badgeUrl: "https://cert.efset.org/zcHVAD",
+    badgeLabelKey: "lang_en_badge",
+  },
+  { nameKey: "lang_es_name", levelKey: "lang_es_level" },
+];

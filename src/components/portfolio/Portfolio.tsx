@@ -4,6 +4,7 @@ import { About }      from "./About";
 import { Projects }   from "./Projects";
 import { Education }  from "./Education";
 import { Experience } from "./Experience";
+import { Languages }  from "./Languages";
 import { Contact }    from "./Contact";
 import { Footer }     from "./Footer";
 
@@ -20,6 +21,7 @@ export default function Portfolio() {
         <Projects />
         <Education />
         <Experience />
+        <Languages />
         <Contact />
       </main>
       <Footer />
