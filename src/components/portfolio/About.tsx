@@ -63,9 +63,8 @@ function SkillIcon({ name, tone }: { name: string; tone: "primary" | "secondary"
   if (!Icon) return null;
   const color = tone === "secondary" ? "var(--secondary)" : "var(--primary)";
   return (
-    <span className="flip-icon shrink-0" aria-hidden="true">
+    <span className="flip-icon shrink-0" aria-hidden="true" style={{ color }}>
       <Icon className="w-4 h-4" />
-      <style>{`.flip-icon svg { color: ${color}; }`}</style>
     </span>
   );
 }
