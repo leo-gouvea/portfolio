@@ -1,7 +1,8 @@
 import { useLang } from "@/lib/i18n";
 import { profile } from "@/data/site";
 import { Button, SectionHeader } from "./ui";
-import { Mail, Phone, MessageCircle, Github, Linkedin, type LucideIcon } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, type LucideIcon } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 /* Contact section.
    - Email / phone / WhatsApp / socials: src/data/site.ts (profile)
@@ -18,7 +19,7 @@ export function Contact() {
   }> = [
     { label: t("contact_email"),    value: profile.email,    href: `mailto:${profile.email}`, Icon: Mail,          tone: "primary"   },
     { label: t("contact_phone"),    value: profile.phone,    href: profile.phoneHref,         Icon: Phone,         tone: "secondary" },
-    { label: t("contact_whatsapp"), value: profile.whatsapp, href: profile.whatsappHref,      Icon: MessageCircle, tone: "primary"   },
+    { label: t("contact_whatsapp"), value: profile.whatsapp, href: profile.whatsappHref,      Icon: FaWhatsapp as unknown as LucideIcon, tone: "primary" },
   ];
 
   return (
