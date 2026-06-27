@@ -25,8 +25,8 @@ export function Hero() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none select-none overflow-visible"
       >
-        <div className="absolute -top-28 -right-10 text-[28vw] font-display text-[color:var(--primary)] opacity-6.5 leading-none -rotate-10">
-          HELLO WORLD
+        <div className="absolute top-30 -bottom-10 text-[13vw] font-display text-[color:var(--primary)] opacity-5 leading-none -rotate-10">
+          WHAT A BEAUTIFUL WORLD
         </div>
       </div>
 

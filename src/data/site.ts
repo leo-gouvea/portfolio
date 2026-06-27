@@ -44,13 +44,13 @@ export const projects: { dev: Project[]; data: Project[] } = {
       title: "Busca Filmes",
       desc: "React SPA with Context API, React Router and async REST API consumption. Deployed to production.",
       tags: ["React", "Context API", "REST API"],
-      repo: "https://github.com/leo-gouvea",
+      repo: "https://github.com/leo-gouvea/busca-filmes",
     },
     {
       title: "Java OOP Exercises",
       desc: "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
       tags: ["Java", "OOP"],
-      repo: "https://github.com/leo-gouvea",
+      repo: "https://github.com/leo-gouvea/curso-devfullstackjr-prati/tree/main/Lista%20de%20Tarefas%207%20-%20Java%20OO",
     },
   ],
   data: [

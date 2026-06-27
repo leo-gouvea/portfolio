@@ -2,6 +2,13 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Monument Extended";
+  src: url("./components/assets/fonts/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /* =========================================================================
@@ -53,7 +60,7 @@
 /* ---------- FONTS (loaded in src/routes/__root.tsx) ---------- */
 :root {
   --radius: 0.25rem;
-  --font-display: "Bebas Neue", "Oswald", system-ui, sans-serif;
+  --font-display: "Monument Extended", "Oswald", system-ui, sans-serif;
   --font-ui: "Rajdhani", "Oswald", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -79,7 +86,7 @@
   --surface:   oklch(0.96 0.16 102 / 0.92);
   --surface-2: oklch(0.88 0.18 100);
   --primary:   oklch(0.20 0.04 100);          /* near black */
-  --secondary: oklch(0.55 0.20 35);           /* warm orange */
+  --secondary: oklch(70.183% 0.14974 62.885);           /* warm orange */
   --text:      oklch(0.18 0.03 100);
   --text-dim:  oklch(0.35 0.05 100);
   --border:    oklch(0.20 0.04 100 / 0.4);
