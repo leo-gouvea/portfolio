@@ -18,6 +18,9 @@ export const profile = {
   email: "leonardo.j.gouvea@outlook.com",
   phone: "+55 (11) 94268-2040",
   phoneHref: "tel:+5511942682040",
+  /* WhatsApp deep-link. wa.me uses international format, digits only. */
+  whatsapp: "+55 (11) 94268-2040",
+  whatsappHref: "https://wa.me/5511942682040",
   github: "https://github.com/leo-gouvea",
   githubHandle: "leo-gouvea",
   linkedin: "https://linkedin.com/in/leonardo-gouvea-ti/",
