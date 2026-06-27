@@ -1,8 +1,7 @@
 import { useLang } from "@/lib/i18n";
 import { profile } from "@/data/site";
 import { Button, SectionHeader } from "./ui";
-import { Mail, Phone, MessageCircle, Github, Linkedin } from "lucide-react";
-import type { ComponentType } from "react";
+import { Mail, Phone, MessageCircle, Github, Linkedin, type LucideIcon } from "lucide-react";
 
 /* Contact section.
    - Email / phone / WhatsApp / socials: src/data/site.ts (profile)
@@ -14,7 +13,7 @@ export function Contact() {
     label: string;
     value: string;
     href: string;
-    Icon: ComponentType<{ className?: string }>;
+    Icon: LucideIcon;
     tone: "primary" | "secondary";
   }> = [
     { label: t("contact_email"),    value: profile.email,    href: `mailto:${profile.email}`, Icon: Mail,          tone: "primary"   },
