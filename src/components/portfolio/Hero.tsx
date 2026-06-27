@@ -21,12 +21,17 @@ export function Hero() {
       aria-labelledby="hero-title"
       className="relative min-h-[90vh] pt-24 pb-16 flex items-center overflow-visible"
     >
+      {/* Decorative background type — two diagonals for contrast.
+          Text strings live in i18n: hero_bg_main / hero_bg_alt. */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none select-none overflow-hidden"
       >
-        <div className="absolute top-30 -bottom-10 left-0 right-0 text-[13vw] font-display text-[color:var(--primary)] opacity-5 leading-none -rotate-10 whitespace-nowrap">
-          WHAT A BEAUTIFUL WORLD
+        <div className="absolute top-24 left-0 right-0 text-[11vw] font-display text-[color:var(--primary)] opacity-[0.06] leading-none -rotate-6 whitespace-nowrap">
+          {t("hero_bg_main")}
+        </div>
+        <div className="absolute bottom-10 left-0 right-0 text-[6vw] font-display text-[color:var(--secondary)] opacity-[0.08] leading-none rotate-6 whitespace-nowrap text-right pr-8">
+          {t("hero_bg_alt")}
         </div>
       </div>
 
