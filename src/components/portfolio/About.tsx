@@ -1,6 +1,7 @@
 import { useLang } from "@/lib/i18n";
 import { skills } from "@/data/site";
 import { SectionHeader } from "./ui";
+import { skillIcons } from "./skillIcons";
 
 /* About + Skills.
    - Bio paragraph: i18n key `about_body` (src/lib/i18n.tsx).
@@ -38,10 +39,11 @@ export function About() {
                   {g.items.map((it) => (
                     <li
                       key={it}
-                      className="border-l-4 px-3 py-1.5 bg-[color:var(--surface-2)] font-display tracking-wider text-sm"
+                      className="flex items-center justify-between gap-3 border-l-4 px-3 py-1.5 bg-[color:var(--surface-2)] font-display tracking-wider text-sm"
                       style={{ borderColor: g.tone === "secondary" ? "var(--secondary)" : "var(--primary)" }}
                     >
-                      {it}
+                      <span>{it}</span>
+                      <SkillIcon name={it} tone={g.tone} />
                     </li>
                   ))}
                 </ul>
@@ -51,5 +53,19 @@ export function About() {
         </div>
       </div>
     </section>
+  );
+}
+
+/* Small icon flipped on hover (180° coin flip).
+   Animation styles live in src/styles.css (.flip-icon). */
+function SkillIcon({ name, tone }: { name: string; tone: "primary" | "secondary" }) {
+  const Icon = skillIcons[name];
+  if (!Icon) return null;
+  const color = tone === "secondary" ? "var(--secondary)" : "var(--primary)";
+  return (
+    <span className="flip-icon shrink-0" aria-hidden="true">
+      <Icon className="w-4 h-4" />
+      <style>{`.flip-icon svg { color: ${color}; }`}</style>
+    </span>
   );
 }
