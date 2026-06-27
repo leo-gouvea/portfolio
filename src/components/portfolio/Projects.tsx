@@ -2,13 +2,46 @@ import { useState } from "react";
 import { useLang } from "@/lib/i18n";
 import { projects, type Project } from "@/data/site";
 import { Button, SectionHeader } from "./ui";
+import { BarChart3, CodeXml, ImageOff } from "lucide-react";
 
 type Tab = "dev" | "data";
 
-function ProjectCard({ p }: { p: Project }) {
+/* Project card.
+   - Preview image: set `image` in src/data/site.ts (Project).
+     Empty -> placeholder icon panel renders instead.
+   - Aspect ratio is fixed (16/9) so cards align in a clean grid. */
+function ProjectCard({ p, tab }: { p: Project; tab: Tab }) {
   const { t } = useLang();
+  const TabIcon = tab === "data" ? BarChart3 : CodeXml;
   return (
-    <article className="panel scanlines p-5 hover:-translate-y-1 transition-transform anim-fade-up">
+    <article className="panel scanlines overflow-hidden hover:-translate-y-1 transition-transform anim-fade-up flex flex-col">
+      <div className="relative aspect-[16/9] bg-[color:var(--surface-2)] border-b border-[color:var(--border)] overflow-hidden">
+        {p.image ? (
+          <img
+            src={p.image}
+            alt={p.title}
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 grid place-items-center text-[color:var(--primary)] opacity-50">
+            <div className="flex flex-col items-center gap-2">
+              <ImageOff className="w-10 h-10" />
+              <span className="font-mono text-[10px] tracking-widest">
+                {t("project_preview_placeholder")}
+              </span>
+            </div>
+          </div>
+        )}
+        <span
+          className="absolute top-2 right-2 grid place-items-center w-8 h-8 bg-[color:var(--bg)]/80 border border-[color:var(--border)] text-[color:var(--primary)]"
+          aria-hidden="true"
+        >
+          <TabIcon className="w-4 h-4" />
+        </span>
+      </div>
+
+      <div className="p-5 flex flex-col flex-1">
       <h3 className="font-display text-2xl leading-tight mb-2">{p.title}</h3>
       <p className="text-sm opacity-80 leading-relaxed mb-4">{p.desc}</p>
 
@@ -23,7 +56,7 @@ function ProjectCard({ p }: { p: Project }) {
         ))}
       </ul>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 mt-auto">
         {p.repo && (
           <Button href={p.repo} variant="ghost" className="!px-4 !py-2 !text-[11px]">
             {t("view_repo")}
@@ -34,6 +67,7 @@ function ProjectCard({ p }: { p: Project }) {
             {p.demo.includes("powerbi") ? t("open_dashboard") : t("live_demo")}
           </Button>
         )}
+      </div>
       </div>
     </article>
   );
@@ -52,7 +86,9 @@ export function Projects() {
         <SectionHeader index="02" label={t("section_projects")} id="projects-title" />
 
         <div role="tablist" aria-label={t("section_projects")} className="flex flex-wrap items-center gap-3 mb-10">
-          {(["dev", "data"] as Tab[]).map((id) => (
+          {(["dev", "data"] as Tab[]).map((id) => {
+            const Icon = id === "data" ? BarChart3 : CodeXml;
+            return (
             <button
               key={id}
               role="tab"
@@ -64,14 +100,18 @@ export function Projects() {
                   : "bg-[color:var(--surface-2)] text-[color:var(--primary)] border border-[color:var(--border)]"
               }`}
             >
-              <span className="skew-tab-inner block">{id === "dev" ? t("tab_dev") : t("tab_data")}</span>
+              <span className="skew-tab-inner flex items-center gap-2">
+                <Icon className="w-4 h-4" />
+                {id === "dev" ? t("tab_dev") : t("tab_data")}
+              </span>
             </button>
-          ))}
+            );
+          })}
         </div>
 
         <div key={tab} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 anim-fade-in">
           {list.map((p) => (
-            <ProjectCard key={p.title} p={p} />
+            <ProjectCard key={p.title} p={p} tab={tab} />
           ))}
           {tab === "data" && (
             <article className="panel scanlines p-5 flex flex-col items-center justify-center text-center min-h-[200px]">
