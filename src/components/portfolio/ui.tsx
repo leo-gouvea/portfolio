@@ -19,7 +19,9 @@ export function Tag({ children, tone = "primary" }: TagProps) {
       ? "bg-[color:var(--secondary)] text-[color:var(--bg)]"
       : "bg-[color:var(--primary)] text-[color:var(--bg)]";
   return (
-    <span className={`inline-block skew-tab font-display text-[11px] tracking-widest px-3 py-1 ${bg}`}>
+    <span
+      className={`inline-block skew-tab font-display text-[11px] tracking-widest px-3 py-1 ${bg}`}
+    >
       <span className="block skew-tab-inner">{children}</span>
     </span>
   );
@@ -45,10 +47,54 @@ export function Button({
     variant === "primary"
       ? "bg-[color:var(--primary)] text-[color:var(--bg)]"
       : variant === "secondary"
-      ? "bg-[color:var(--secondary)] text-[color:var(--bg)]"
-      : "bg-transparent border border-[color:var(--primary)] text-[color:var(--primary)]";
-  const cls = `inline-flex skew-tab items-center px-6 py-3 font-display tracking-[0.2em] text-sm transition-transform hover:-translate-y-0.5 ${fill} ${className}`;
-  const inner = <span className="skew-tab-inner flex items-center gap-2">{children}</span>;
+        ? "bg-[color:var(--secondary)] text-[color:var(--bg)]"
+        : "bg-transparent border border-[color:var(--primary)] text-[color:var(--primary)]";
+  const cls = `
+inline-flex
+skew-tab
+relative
+overflow-hidden
+items-center
+px-6
+py-3
+font-display
+tracking-[0.2em]
+text-sm
+transition-all
+duration-300
+hover:-translate-y-0.5
+group
+${fill}
+${className}
+`;
+  const inner = (
+    <>
+      <span className="
+      absolute
+      inset-0
+      bg-black/80
+      scale-x-0
+      origin-left
+      transition-transform
+      duration-300
+      group-hover:scale-x-100
+    " />
+
+      <span className="
+      relative
+      z-10
+      skew-tab-inner
+      flex
+      items-center
+      gap-2
+      transition-colors
+      duration-300
+      group-hover:text-[color:var(--secondary)]
+    ">
+        {children}
+      </span>;
+    </>
+  );
 
   if (href) {
     const external = href.startsWith("http");

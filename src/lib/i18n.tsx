@@ -74,8 +74,6 @@ const en: Dict = {
   lang_es_name: "Spanish",
   lang_es_level: "Basic",
   /* Contact */
-  contact_lead:
-    "Open to remote opportunities, hybrid roles in São Paulo and the ABC region, and international positions in English.",
   contact_whatsapp: "WHATSAPP",
   view_repo: "VIEW REPO",
   live_demo: "LIVE DEMO",
@@ -121,7 +119,7 @@ const pt: Dict = {
   about_stack_label: "STACK PRINCIPAL",
   about_stack: "React · Python · Java · SQL · n8n · LLMs",
   about_status_label: "STATUS",
-  about_status: "Aberto a oportunidades — remotas, híbridas (SP / ABC) e internacionais.",
+  about_status: "Aberto a oportunidades remotas, híbridas e presenciais. Tenho preferência por modelos remoto ou híbrido, especialmente em São Paulo e região do ABC, mas permaneço disponível para discutir diferentes formatos de trabalho.",
   skills_dev: "DESENVOLVIMENTO",
   skills_data: "DADOS & ANALYTICS",
   edu_ads_title: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
@@ -155,8 +153,6 @@ const pt: Dict = {
   lang_en_badge: "VER CERTIFICADO EFSET",
   lang_es_name: "Espanhol",
   lang_es_level: "Básico",
-  contact_lead:
-    "Aberto a oportunidades remotas, vagas híbridas em São Paulo e no ABC, e também vagas internacionais em inglês.",
   contact_whatsapp: "WHATSAPP",
   view_repo: "VER REPO",
   live_demo: "DEMO AO VIVO",

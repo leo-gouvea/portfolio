@@ -1,7 +1,7 @@
 import { useLang } from "@/lib/i18n";
 import { profile } from "@/data/site";
 import { Button, SectionHeader } from "./ui";
-import { Mail, Phone, Github, Linkedin, type LucideIcon } from "lucide-react";
+import { Mail, Github, Linkedin, type LucideIcon } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 /* Contact section.
@@ -18,7 +18,6 @@ export function Contact() {
     tone: "primary" | "secondary";
   }> = [
     { label: t("contact_email"),    value: profile.email,    href: `mailto:${profile.email}`, Icon: Mail,          tone: "primary"   },
-    { label: t("contact_phone"),    value: profile.phone,    href: profile.phoneHref,         Icon: Phone,         tone: "secondary" },
     { label: t("contact_whatsapp"), value: profile.whatsapp, href: profile.whatsappHref,      Icon: FaWhatsapp as unknown as LucideIcon, tone: "primary" },
   ];
 
@@ -26,13 +25,7 @@ export function Contact() {
     <section id="contact" aria-labelledby="contact-title" className="relative py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <SectionHeader index="06" label={t("section_contact")} id="contact-title" />
-        <div className="panel scanlines p-8 sm:p-10 grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 className="font-display text-4xl sm:text-5xl leading-tight">
-              <span className="text-[color:var(--primary)]">{t("section_contact")}</span>
-            </h3>
-            <p className="mt-4 opacity-80 leading-relaxed">{t("contact_lead")}</p>
-          </div>
+        <div className="panel scanlines p-8 sm:p-10 max-w-3xl mx-auto">
           <address className="not-italic space-y-3 font-mono text-sm">
             {channels.map(({ label, value, href, Icon, tone }) => {
               const external = href.startsWith("http");

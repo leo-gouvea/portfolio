@@ -2,8 +2,13 @@ import { useLang } from "@/lib/i18n";
 import { profile } from "@/data/site";
 import { Button, Tag } from "./ui";
 import { useState } from "react";
-import minhaFoto from "../assets/minha-foto.png";
-import minhaFotoVerso from "../assets/minha-fotoVerso.png";
+import minhaFoto from "@/assets/images/minha-foto.png";
+import minhaFotoVerso from "@/assets/images/minha-fotoVerso.png";
+
+import {
+  CodeXml,
+  BarChart3
+} from "lucide-react";
 
 /* Hero section.
    - Big name comes from profile.name (src/data/site.ts).
@@ -25,12 +30,12 @@ export function Hero() {
           Text strings live in i18n: hero_bg_main / hero_bg_alt. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+        className="absolute inset-0 pointer-events-none select-none overflow-visible"
       >
-        <div className="absolute top-24 left-0 right-0 text-[11vw] font-display text-[color:var(--primary)] opacity-[0.06] leading-none -rotate-6 whitespace-nowrap">
+        <div className="absolute top-12 left-0 right-0 text-[11vw] font-display text-[color:var(--primary)] opacity-[0.06] leading-none -rotate-6">
           {t("hero_bg_main")}
         </div>
-        <div className="absolute bottom-10 left-0 right-0 text-[6vw] font-display text-[color:var(--secondary)] opacity-[0.08] leading-none rotate-6 whitespace-nowrap text-right pr-8">
+        <div className="absolute bottom-10 left-0 right-0 text-[6vw] font-display text-[color:var(--secondary)] opacity-[0.08] leading-none rotate-8 whitespace-nowrap text-right pr-8">
           {t("hero_bg_alt")}
         </div>
       </div>
@@ -61,10 +66,12 @@ export function Hero() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="#projects" variant="primary">
+                <CodeXml className="w-4 h-4" />
                 {t("hero_cta_dev")}
               </Button>
 
               <Button href="#projects" variant="secondary">
+                <BarChart3 className="w-4 h-4" />
                 {t("hero_cta_data")}
               </Button>
             </div>
