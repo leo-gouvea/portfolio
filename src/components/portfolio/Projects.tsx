@@ -113,12 +113,11 @@ export function Projects() {
           {list.map((p) => (
             <ProjectCard key={p.title} p={p} tab={tab} />
           ))}
-          {tab === "data" && (
             <article className="panel scanlines p-5 flex flex-col items-center justify-center text-center min-h-[200px]">
               <span className="font-display text-5xl text-[color:var(--primary)] opacity-40 mb-2">+</span>
               <p className="font-display tracking-widest opacity-70">{t("more_soon")}</p>
             </article>
-          )}
+          
         </div>
       </div>
     </section>

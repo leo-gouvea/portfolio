@@ -11,6 +11,20 @@
    CTAs) live in src/lib/i18n.tsx.
    ============================================================= */
 
+import dashboardFinanceiroImg from "@/assets/images/dashboardFinanceiroImg.png";
+import dashboardLogisticaImg from "@/assets/images/dashboardLogisticaImg.png";
+import buscaFilmesImg from "@/assets/images/buscaFilmesGif.gif";
+import crudImg from "@/assets/images/crudImg.png";
+import javaImg from "@/assets/images/javaImg.png";
+import clubemescLogo from "@/assets/logos/clubemesc_logo.jpg";
+import etecLogo from "@/assets/logos/eteclaurogomes_logo.jpg";
+import fsaLogo from "@/assets/logos/fsaoficial_logo.jpg";
+import casasbahiaLogo from "@/assets/logos/grupocasasbahia_logo.jpg";
+import proaLogo from "@/assets/logos/instituto_proa_logo.jpg";
+import pratiLogo from "@/assets/logos/maisprati_logo.jpg";
+import wizardLogo from "@/assets/logos/wizard_by_pearson_logo.jpg";
+import cafezinhoLogo from "@/assets/logos/cafezinho_logo.jpg"
+
 export const profile = {
   name: "Leonardo José Alves Gouvea",
   shortName: "Leonardo Gouvea",
@@ -46,18 +60,21 @@ export const projects: { dev: Project[]; data: Project[] } = {
       desc: "Full-stack web system with admin auth, multi-entity management, versioned SQL schema and UML documentation.",
       tags: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
       repo: "https://github.com/leo-gouvea/transportadora-logistica-crud",
+      image: crudImg,
     },
     {
       title: "Busca Filmes",
       desc: "React SPA with Context API, React Router and async REST API consumption. Deployed to production.",
       tags: ["React", "Context API", "REST API"],
       repo: "https://github.com/leo-gouvea/busca-filmes",
+      image: buscaFilmesImg,
     },
     {
       title: "Java OOP Exercises",
       desc: "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
       tags: ["Java", "OOP"],
       repo: "https://github.com/leo-gouvea/curso-devfullstackjr-prati/tree/main/Lista%20de%20Tarefas%207%20-%20Java%20OO",
+      image: javaImg,
     },
   ],
   data: [
@@ -66,12 +83,14 @@ export const projects: { dev: Project[]; data: Project[] } = {
       desc: "Power BI dashboard for personal/business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown by category → subcategory → supplier, full transaction table.",
       tags: ["Power BI", "DAX", "Cash Flow"],
       demo: "https://app.powerbi.com/groups/me/reports/8c7c3bcf-e798-4605-88b1-464b9fcf0f70/dc440fe2840368d246e1?experience=power-bi",
+      image: dashboardFinanceiroImg,
     },
     {
       title: "Dashboard Logística & Transportes",
       desc: "Power BI dashboard tracking OTD (On Time Delivery), delivery deviation ranking, carrier performance and root cause insights across 1,755 deliveries in 2025.",
       tags: ["Power BI", "DAX", "KPI", "Logistics"],
       demo: "https://app.powerbi.com/groups/me/reports/2311d3dd-398f-4cc3-ba90-5f29be68628a/e8236f7c445a855810bc?experience=power-bi",
+      image: dashboardLogisticaImg,
     },
   ],
 };
@@ -91,15 +110,16 @@ export type EducationItem = {
   titleKey: string;
   orgKey: string;
   date: string;
+  logo: string;
   descKey?: string;
 };
 
 export const education: EducationItem[] = [
-  { titleKey: "edu_ads_title",   orgKey: "edu_ads_org",   date: "Feb 2025 – Dec 2026" },
-  { titleKey: "edu_prati_title", orgKey: "edu_prati_org", date: "Apr 2025 – Dec 2026" },
-  { titleKey: "edu_etec_title",  orgKey: "edu_etec_org",  date: "Feb 2022 – Dec 2024" },
-  { titleKey: "edu_proa_title",  orgKey: "edu_proa_org",  date: "Sep 2024 – Nov 2024", descKey: "edu_proa_desc" },
-  { titleKey: "edu_wizard_title",orgKey: "edu_wizard_org",date: "Feb 2022 – Dec 2023" },
+  { titleKey: "edu_ads_title",   orgKey: "edu_ads_org",   date: "Feb 2025 – Dec 2026", logo: fsaLogo },
+  { titleKey: "edu_prati_title", orgKey: "edu_prati_org", date: "Apr 2025 – Nov 2025", logo: pratiLogo },
+  { titleKey: "edu_etec_title",  orgKey: "edu_etec_org",  date: "Feb 2022 – Dec 2024", logo: etecLogo },
+  { titleKey: "edu_proa_title",  orgKey: "edu_proa_org",  date: "Sep 2024 – Nov 2024", descKey: "edu_proa_desc", logo: proaLogo },
+  { titleKey: "edu_wizard_title",orgKey: "edu_wizard_org",date: "Feb 2022 – Dec 2023", logo: wizardLogo },
 ];
 
 /* =============================================================
@@ -110,12 +130,28 @@ export type ExperienceItem = {
   roleKey: string;
   orgKey: string;
   descKey: string;
+  logo: string;
 };
 
 export const experience: ExperienceItem[] = [
-  { roleKey: "exp_cb_role",    orgKey: "exp_cb_org",    descKey: "exp_cb_desc" },
-  { roleKey: "exp_mesc_role",  orgKey: "exp_mesc_org",  descKey: "exp_mesc_desc" },
-  { roleKey: "exp_cafe_role",  orgKey: "exp_cafe_org",  descKey: "exp_cafe_desc" },
+  {
+    roleKey: "exp_cb_role",
+    orgKey: "exp_cb_org",
+    descKey: "exp_cb_desc",
+    logo: casasbahiaLogo,
+  },
+  {
+    roleKey: "exp_mesc_role",
+    orgKey: "exp_mesc_org",
+    descKey: "exp_mesc_desc",
+    logo: clubemescLogo,
+  },
+  {
+    roleKey: "exp_cafe_role",
+    orgKey: "exp_cafe_org",
+    descKey: "exp_cafe_desc",
+    logo: cafezinhoLogo,
+  },
 ];
 
 /* =============================================================

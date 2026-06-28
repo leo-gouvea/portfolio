@@ -9,7 +9,7 @@ import { skillIcons } from "./skillIcons";
 export function About() {
   const { t } = useLang();
   const groups = [
-    { title: t("skills_dev"),  items: skills.dev,  tone: "primary" as const },
+    { title: t("skills_dev"), items: skills.dev, tone: "primary" as const },
     { title: t("skills_data"), items: skills.data, tone: "secondary" as const },
   ];
 
@@ -17,9 +17,9 @@ export function About() {
      column doesn't feel empty. Add / remove entries here freely —
      each label/value is an i18n key in src/lib/i18n.tsx. */
   const highlights = [
-    { label: t("about_focus_label"),  value: t("about_focus"),  tone: "primary"   as const },
-    { label: t("about_stack_label"),  value: t("about_stack"),  tone: "secondary" as const },
-    { label: t("about_status_label"), value: t("about_status"), tone: "primary"   as const },
+    { label: t("about_stack_label"), value: t("about_stack"), tone: "secondary" as const },
+    { label: t("about_focus_label"), value: t("about_focus"), tone: "primary" as const },
+    { label: t("about_status_label"), value: t("about_status"), tone: "primary" as const },
   ];
 
   return (
@@ -35,11 +35,15 @@ export function About() {
                 <li
                   key={h.label}
                   className="border-l-4 pl-3 py-1 bg-[color:var(--surface-2)]"
-                  style={{ borderColor: h.tone === "secondary" ? "var(--secondary)" : "var(--primary)" }}
+                  style={{
+                    borderColor: h.tone === "secondary" ? "var(--secondary)" : "var(--primary)",
+                  }}
                 >
                   <span
                     className="block font-display text-[10px] tracking-[0.25em]"
-                    style={{ color: h.tone === "secondary" ? "var(--secondary)" : "var(--primary)" }}
+                    style={{
+                      color: h.tone === "secondary" ? "var(--secondary)" : "var(--primary)",
+                    }}
                   >
                     {h.label}
                   </span>
@@ -66,7 +70,9 @@ export function About() {
                     <li
                       key={it}
                       className="flex items-center justify-between gap-3 border-l-4 px-3 py-1.5 bg-[color:var(--surface-2)] font-display tracking-wider text-sm"
-                      style={{ borderColor: g.tone === "secondary" ? "var(--secondary)" : "var(--primary)" }}
+                      style={{
+                        borderColor: g.tone === "secondary" ? "var(--secondary)" : "var(--primary)",
+                      }}
                     >
                       <span>{it}</span>
                       <SkillIcon name={it} tone={g.tone} />
