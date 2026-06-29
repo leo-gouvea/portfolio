@@ -1,23 +1,39 @@
+/* =============================================================
+   HERO SECTION
+   -------------------------------------------------------------
+   Top landing block: name, role, location, primary CTAs and the
+   flipping profile portrait.
+
+   Data sources
+   - Personal name / shortName  -> src/data/site.ts (`profile`)
+   - Headline / sub / location  -> src/lib/i18n.tsx
+                                   (hero_title / hero_sub /
+                                    hero_location)
+   - Decorative background type -> src/lib/i18n.tsx
+                                   (hero_bg_main / hero_bg_alt)
+   - Portrait images            -> src/assets/images/minha-foto*
+   - CTA labels                 -> hero_cta_dev / hero_cta_data
+   - Visual utilities (skew-tab,
+     panel, scanlines, fonts)   -> src/styles.css
+   ============================================================= */
+
+import { useState } from "react";
+import { BarChart3, CodeXml } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { profile } from "@/data/site";
-import { Button, Tag } from "./ui";
-import { useState } from "react";
 import minhaFoto from "@/assets/images/minha-foto.png";
 import minhaFotoVerso from "@/assets/images/minha-fotoVerso.png";
+import { Button, Tag } from "./ui";
 
-import {
-  CodeXml,
-  BarChart3
-} from "lucide-react";
-
-/* Hero section.
-   - Big name comes from profile.name (src/data/site.ts).
-   - Title/sub/location come from i18n keys hero_title / hero_sub / hero_location. */
 export function Hero() {
   const { t } = useLang();
+  /* Split the full name so the last word can take the
+     secondary accent color while the middle takes primary. */
   const [first, ...rest] = profile.name.split(" ");
   const last = rest.pop() ?? "";
   const middle = rest.join(" ");
+  /* `rotation` drives the coin-flip portrait. Mouse enter spins
+     it 540° (1.5 turns) and mouse leave rewinds back to 0. */
   const [rotation, setRotation] = useState(0);
 
   return (
