@@ -1,13 +1,21 @@
-import { useLang } from "@/lib/i18n";
+/* =============================================================
+   EXPERIENCE
+   -------------------------------------------------------------
+   Work history list. Dates are intentionally omitted.
+
+   Data sources
+   - Entries (logo, key refs) -> src/data/site.ts (`experience`)
+   - Role / org / description -> src/lib/i18n.tsx (exp_* keys)
+
+   Description format: a single i18n string with lines separated
+   by `\n`. Lines starting with `•` are rendered as bullets, the
+   remaining line is rendered as an intro paragraph.
+   ============================================================= */
+
 import { experience } from "@/data/site";
+import { useLang } from "@/lib/i18n";
 import { SectionHeader } from "./ui";
 
-/* Experience list.
-   - Items: src/data/site.ts -> experience
-   - Translated text: src/lib/i18n.tsx (exp_* keys).
-   - Dates are intentionally omitted per current preference.
-   - Multi-line descriptions are split on `\n` and rendered as
-     intro paragraph + bullet list. */
 export function Experience() {
   const { t } = useLang();
 

@@ -1,10 +1,20 @@
-import { useLang } from "@/lib/i18n";
+/* =============================================================
+   EDUCATION
+   -------------------------------------------------------------
+   Vertical list of academic / course entries.
+
+   Data sources
+   - Entries (logo, date, key refs) -> src/data/site.ts (`education`)
+   - Titles / orgs / descriptions   -> src/lib/i18n.tsx (edu_* keys)
+
+   Dates are intentionally rendered as-is (locale-neutral) so
+   no translation work is needed when adding a new entry.
+   ============================================================= */
+
 import { education } from "@/data/site";
+import { useLang } from "@/lib/i18n";
 import { SectionHeader } from "./ui";
 
-/* Education list.
-   - Items + dates: src/data/site.ts -> education
-   - Translated titles / orgs / descriptions: src/lib/i18n.tsx (edu_* keys) */
 export function Education() {
   const { t } = useLang();
   return (

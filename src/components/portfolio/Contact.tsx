@@ -1,12 +1,20 @@
-import { useLang } from "@/lib/i18n";
-import { profile } from "@/data/site";
-import { Button, SectionHeader } from "./ui";
-import { Mail, Github, Linkedin, type LucideIcon } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+/* =============================================================
+   CONTACT
+   -------------------------------------------------------------
+   Email + WhatsApp channels plus GitHub / LinkedIn CTAs.
 
-/* Contact section.
-   - Email / phone / WhatsApp / socials: src/data/site.ts (profile)
-   - Availability copy: i18n key `contact_lead`. */
+   Data sources
+   - Channels & socials -> src/data/site.ts (`profile`)
+   - Channel labels     -> src/lib/i18n.tsx
+                           (contact_email / contact_whatsapp / ...)
+   ============================================================= */
+
+import { Github, Linkedin, Mail, type LucideIcon } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { profile } from "@/data/site";
+import { useLang } from "@/lib/i18n";
+import { Button, SectionHeader } from "./ui";
+
 export function Contact() {
   const { t } = useLang();
 

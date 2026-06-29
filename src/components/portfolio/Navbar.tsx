@@ -1,16 +1,26 @@
-import { useLang } from "@/lib/i18n";
+/* =============================================================
+   NAVBAR
+   -------------------------------------------------------------
+   Fixed top bar with brand mark, section anchors, palette
+   switcher and language switcher.
+
+   Data sources
+   - Brand initials / short name -> src/data/site.ts (`profile`)
+   - Link labels                 -> src/lib/i18n.tsx (nav_* keys)
+   - Palette switcher            -> ./ThemeSwitcher
+   - Language switcher           -> ./LangSwitcher
+
+   To add a nav link: append { href, key } to `links` below AND
+   add the matching key to BOTH dicts in src/lib/i18n.tsx.
+   ============================================================= */
+
 import { profile } from "@/data/site";
+import { useLang } from "@/lib/i18n";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
-/* Top navigation bar.
-   - Section anchor links are derived from `links` below.
-   - Logo initials come from src/data/site.ts (profile.initials).
-   - Language and palette switchers are separate components. */
 export function Navbar() {
   const { t } = useLang();
-  /* To add a nav link: append { href, key } here and add the matching
-     key to BOTH dicts in src/lib/i18n.tsx. */
   const links = [
     { href: "#about",      key: "nav_about" as const },
     { href: "#projects",   key: "nav_projects" as const },

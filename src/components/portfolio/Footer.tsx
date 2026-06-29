@@ -1,6 +1,12 @@
+/* =============================================================
+   FOOTER
+   -------------------------------------------------------------
+   Single-line site footer.
+   - Copy: src/lib/i18n.tsx -> `footer` key (EN & PT)
+   ============================================================= */
+
 import { useLang } from "@/lib/i18n";
 
-/* Footer. Text comes from i18n key `footer`. */
 export function Footer() {
   const { t } = useLang();
   return (

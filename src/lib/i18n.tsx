@@ -1,3 +1,18 @@
+/* =============================================================
+   INTERNATIONALIZATION (i18n)
+   -------------------------------------------------------------
+   Single source of truth for every user-facing string.
+
+   - Active locales:        `en` and `pt`
+   - Add / edit copy:       update the matching key in BOTH dicts
+   - Add a new key:         add it to `en` first (it becomes the
+                            authoritative shape via `keyof typeof en`)
+                            then mirror it in `pt`
+   - Consume in a component: `const { t } = useLang(); t("my_key")`
+   - Persistence:           selected language is stored in
+                            localStorage under the `lang` key
+   ============================================================= */
+
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 export type Lang = "en" | "pt";

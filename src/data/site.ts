@@ -1,14 +1,20 @@
 /* =============================================================
-   SITE CONTENT — EDIT TEXT, LINKS, PROJECTS HERE
+   SITE CONTENT — single source of truth for portfolio data
    -------------------------------------------------------------
-   - Personal info (name, email, phone, socials) -> `profile`
-   - Project cards (dev & data)                  -> `projects`
-   - Skills lists                                -> `skills`
-   - Education entries                           -> `education`
-   - Experience entries                          -> `experience`
+   Edit this file to update:
+     - `profile`    : personal info, contact channels, socials
+     - `projects`   : dev & data project cards (titles, links,
+                      tags, preview images)
+     - `skills`     : grouped skill lists rendered in About
+     - `education`  : academic / course entries (with dates)
+     - `experience` : work history (dates intentionally omitted
+                      on render)
+     - `languages`  : spoken-language proficiency + optional
+                      external certificate link
 
-   Translated strings (nav labels, section titles, About bio,
-   CTAs) live in src/lib/i18n.tsx.
+   Every translated string (nav labels, section titles, About
+   bio, CTAs, education / experience / language copy) lives in
+   src/lib/i18n.tsx and is referenced here by key only.
    ============================================================= */
 
 import dashboardFinanceiroImg from "@/assets/images/dashboardFinanceiroImg.png";

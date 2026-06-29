@@ -1,8 +1,25 @@
+/* =============================================================
+   PROJECTS
+   -------------------------------------------------------------
+   Tabbed gallery of Dev and Data projects.
+
+   Data sources
+   - Project entries (titles, descs, tags, links, preview
+     images)              -> src/data/site.ts (`projects`)
+   - Tab labels, CTAs,
+     placeholder copy     -> src/lib/i18n.tsx
+                             (tab_dev / tab_data / view_repo /
+                              live_demo / open_dashboard /
+                              more_soon / project_preview_placeholder)
+   - Category icons       -> lucide `CodeXml` (dev) /
+                             `BarChart3` (data)
+   ============================================================= */
+
 import { useState } from "react";
-import { useLang } from "@/lib/i18n";
-import { projects, type Project } from "@/data/site";
-import { Button, SectionHeader } from "./ui";
 import { BarChart3, CodeXml, ImageOff } from "lucide-react";
+import { projects, type Project } from "@/data/site";
+import { useLang } from "@/lib/i18n";
+import { Button, SectionHeader } from "./ui";
 
 type Tab = "dev" | "data";
 
