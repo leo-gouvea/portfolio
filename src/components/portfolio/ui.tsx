@@ -64,6 +64,7 @@ transition-all
 duration-300
 hover:-translate-y-0.5
 group
+whitespace-nowrap
 ${fill}
 ${className}
 `;
@@ -92,7 +93,7 @@ ${className}
       group-hover:text-[color:var(--secondary)]
     ">
         {children}
-      </span>;
+      </span>
     </>
   );
 
