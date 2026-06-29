@@ -20,7 +20,7 @@ Designed with responsiveness, modularity and maintainability in mind, every sect
 
 > *(Add screenshots or a GIF after deployment.)*
 
-```
+
 <img width="870" height="436" alt="preview" src="https://github.com/user-attachments/assets/f9e75fab-2560-4bf9-89ff-b9e045601d21" />
 
 <img width="1901" height="963" alt="{E80BB8DE-8E22-4048-8D51-3D7176DFD00E}" src="https://github.com/user-attachments/assets/b82388ae-f43d-4c10-8e2e-ee61b62e81ba" />
@@ -28,8 +28,6 @@ Designed with responsiveness, modularity and maintainability in mind, every sect
 <img width="1906" height="958" alt="education" src="https://github.com/user-attachments/assets/29b60e2c-d467-4404-8e1c-13f6122059be" />
 <img width="1903" height="962" alt="projects" src="https://github.com/user-attachments/assets/a7dfe2c0-1fd1-4cc7-94a9-97087f2757b0" />
 
-
-```
 
 ---
 
