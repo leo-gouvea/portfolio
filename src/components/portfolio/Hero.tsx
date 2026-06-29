@@ -64,7 +64,7 @@ export function Hero() {
 
             <p className="mt-2 font-mono text-sm text-[color:var(--primary)]">// {t("hero_sub")}</p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap sm:flex-nowrap gap-4">
               <Button href="#projects" variant="primary">
                 <CodeXml className="w-4 h-4" />
                 {t("hero_cta_dev")}
