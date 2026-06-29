@@ -18,16 +18,34 @@ Designed with responsiveness, modularity and maintainability in mind, every sect
 
 ## 📸 Preview
 
-> *(Add screenshots or a GIF after deployment.)*
+<div align="center">
+  <img src="./src/docs/preview.gif" width="100%" alt="Portfolio Preview Showcase">
+</div>
 
+<br/>
 
-<img width="870" height="436" alt="preview" src="https://github.com/user-attachments/assets/f9e75fab-2560-4bf9-89ff-b9e045601d21" />
-
-<img width="1901" height="963" alt="{E80BB8DE-8E22-4048-8D51-3D7176DFD00E}" src="https://github.com/user-attachments/assets/b82388ae-f43d-4c10-8e2e-ee61b62e81ba" />
-<img width="1906" height="960" alt="contact" src="https://github.com/user-attachments/assets/cb4d4bf1-105f-4e26-b58c-5ec178cff917" />
-<img width="1906" height="958" alt="education" src="https://github.com/user-attachments/assets/29b60e2c-d467-4404-8e1c-13f6122059be" />
-<img width="1903" height="962" alt="projects" src="https://github.com/user-attachments/assets/a7dfe2c0-1fd1-4cc7-94a9-97087f2757b0" />
-
+<table border="0" width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <p align="center"><b>🎮 Home Screen</b></p>
+      <img src="./src/docs/home.png" width="100%" alt="Home">
+    </td>
+    <td width="50%" valign="top">
+      <p align="center"><b>💼 Projects Gallery</b></p>
+      <img src="./src/docs/projects.png" width="100%" alt="Projects">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <p align="center"><b>🎓 Education Timeline</b></p>
+      <img src="./src/docs/education.png" width="100%" alt="Education">
+    </td>
+    <td width="50%" valign="top">
+      <p align="center"><b>📫 Contact Form</b></p>
+      <img src="./src/docs/contact.png" width="100%" alt="Contact">
+    </td>
+  </tr>
+</table>
 
 ---
 
