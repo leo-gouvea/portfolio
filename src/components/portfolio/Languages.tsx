@@ -1,13 +1,22 @@
-import { useLang } from "@/lib/i18n";
+/* =============================================================
+   LANGUAGES
+   -------------------------------------------------------------
+   Grid of spoken-language proficiency cards. Each card can
+   optionally embed an external certificate link (EFSET,
+   Cambridge, ...).
+
+   Data sources
+   - Entries                 -> src/data/site.ts (`languages`)
+   - Names / levels / badges -> src/lib/i18n.tsx (lang_* keys)
+
+   To add a new language: append to `languages` in site.ts and
+   add the matching `lang_*` keys to BOTH EN and PT dicts.
+   ============================================================= */
+
 import { languages } from "@/data/site";
+import { useLang } from "@/lib/i18n";
 import { SectionHeader } from "./ui";
 
-/* Languages section.
-   - Items: src/data/site.ts -> languages
-   - Translated names / levels: src/lib/i18n.tsx (lang_* keys)
-   - Optional `badgeUrl` renders an external link (e.g. EFSET / Cambridge).
-   - To add a new language: append to `languages` in src/data/site.ts and
-     add the matching `lang_*` keys to both EN and PT dicts. */
 export function Languages() {
   const { t } = useLang();
   return (
