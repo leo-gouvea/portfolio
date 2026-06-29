@@ -1,7 +1,17 @@
+/* =============================================================
+   LANGUAGE SWITCHER
+   -------------------------------------------------------------
+   Two-flag toggle (EN / PT) wired into the i18n provider.
+
+   - Active locale state: src/lib/i18n.tsx (`useLang`)
+   - Add a new language : add an entry to `langs` below and
+                          register the matching dict in i18n.tsx
+   Flags are inline SVGs to avoid shipping image assets.
+   ============================================================= */
+
 import type { ReactNode } from "react";
 import { useLang, type Lang } from "@/lib/i18n";
 
-/* Tiny inline SVG flags so we don't ship image assets. */
 function FlagUS() {
   return (
     <svg viewBox="0 0 60 40" className="w-7 h-5" aria-hidden="true">
