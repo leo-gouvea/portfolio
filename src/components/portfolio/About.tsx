@@ -1,11 +1,22 @@
-import { useLang } from "@/lib/i18n";
+/* =============================================================
+   ABOUT + SKILLS
+   -------------------------------------------------------------
+   Two-column block: short bio (with highlight chips) on the
+   left and the Dev / Data skills grid on the right.
+
+   Data sources
+   - Bio paragraph + highlight chip copy -> src/lib/i18n.tsx
+     (about_body, about_focus, about_stack, about_status, ...)
+   - Skill lists                         -> src/data/site.ts
+     (skills.dev / skills.data)
+   - Skill icons                         -> ./skillIcons
+   ============================================================= */
+
 import { skills } from "@/data/site";
+import { useLang } from "@/lib/i18n";
 import { SectionHeader } from "./ui";
 import { skillIcons } from "./skillIcons";
 
-/* About + Skills.
-   - Bio paragraph: i18n key `about_body` (src/lib/i18n.tsx).
-   - Skill items:   src/data/site.ts -> skills.dev / skills.data */
 export function About() {
   const { t } = useLang();
   const groups = [
