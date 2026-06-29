@@ -1,4 +1,4 @@
-# +_+ Leonardo Gouvea — Developer Portfolio
+# Leonardo Gouvea — Developer Portfolio
 
 > **"From code to insight."**
 
