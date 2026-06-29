@@ -12,7 +12,7 @@ Designed with responsiveness, modularity and maintainability in mind, every sect
 
 ## 🌐 Live Demo
 
-> https://YOUR-VERCEL-URL.vercel.app
+> https://portfolio-leogouvea.vercel.app/
 
 ---
 
@@ -161,7 +161,7 @@ Centralize editable content, themes and translations so future updates require m
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/leo-gouvea/portfolio
 ```
 
 Enter the project
