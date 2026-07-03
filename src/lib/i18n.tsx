@@ -44,7 +44,7 @@ const en: Dict = {
   section_languages: "LANGUAGES",
   section_contact: "CONTACT",
   about_body:
-    "Full-stack developer and automation engineer with hands-on experience in React, Python, Java, SQL, PHP and AI-powered automation with n8n and LLMs. Currently expanding into data analysis and Power BI. Interned at Cafezinho delivering a full automation pipeline in production. Working at Grupo Casas Bahia in logistics operations. Studying Systems Analysis & Development at FSA. C1 Advanced English.",
+    "Full-stack developer and automation engineer with hands-on experience in React, Python, Java, SQL, PHP and AI-powered automation with n8n and LLMs. Currently expanding into data analysis and Power BI. Interned at Cafezinho delivering a full automation pipeline in production. Working at Grupo Casas Bahia in logistics operations. Studying Systems Analysis & Development at FSA. C2 Proficient English.",
   about_focus_label: "ANALYSIS TOOLS",
   about_focus: "Data Analytics · Power BI · DAX · ERP TOTVS RM",
   about_stack_label: "CORE STACK",
@@ -84,7 +84,7 @@ const en: Dict = {
   lang_pt_name: "Portuguese",
   lang_pt_level: "Native",
   lang_en_name: "English",
-  lang_en_level: "C1 Advanced",
+  lang_en_level: "C2 Proficient",
   lang_en_badge: "VIEW EFSET CERTIFICATE",
   lang_es_name: "Spanish",
   lang_es_level: "Basic",
@@ -101,6 +101,17 @@ const en: Dict = {
   theme_label: "Theme",
   lang_label: "Language",
   project_preview_placeholder: "PREVIEW COMING SOON",
+  /* Project descriptions (translated; titles remain identical in both langs). */
+  proj_crud_desc:
+    "Full-stack web system with admin authentication, multi-entity management, versioned SQL schema and UML documentation.",
+  proj_busca_desc:
+    "React SPA using Context API, React Router and async REST API consumption. Deployed to production.",
+  proj_java_desc:
+    "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
+  proj_dash_fin_desc:
+    "Power BI dashboard for personal and business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown from category → subcategory → supplier, plus a full transaction table.",
+  proj_dash_log_desc:
+    "Power BI dashboard tracking OTD (On Time Delivery), delivery deviation ranking, carrier performance and root-cause insights across 1,755 deliveries in 2025.",
 };
 
 const pt: Dict = {
