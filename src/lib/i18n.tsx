@@ -139,7 +139,7 @@ const pt: Dict = {
   section_languages: "IDIOMAS",
   section_contact: "CONTATO",
   about_body:
-    "Desenvolvedor full-stack e engenheiro de automação com experiência prática em React, Python, Java, SQL e automações com IA usando n8n e LLMs. Expandindo atualmente para análise de dados e Power BI. Estagiou no Cafezinho entregando um pipeline completo de automação em produção. Atua no Grupo Casas Bahia em operações logísticas. Cursando Análise e Desenvolvimento de Sistemas na FSA. Inglês C1 Avançado.",
+    "Desenvolvedor full-stack e engenheiro de automação com experiência prática em React, Python, Java, SQL e automações com IA usando n8n e LLMs. Expandindo atualmente para análise de dados e Power BI. Estagiou no Cafezinho entregando um pipeline completo de automação em produção. Atua no Grupo Casas Bahia em operações logísticas. Cursando Análise e Desenvolvimento de Sistemas na FSA. Inglês C2 Proficiente.",
   about_focus_label: "FERRAMENTAS DE ANÁLISE",
   about_focus: "Análise de Dados · Power BI · DAX · ERP TOTVS RM",
   about_stack_label: "STACK PRINCIPAL",
@@ -175,7 +175,7 @@ const pt: Dict = {
   lang_pt_name: "Português",
   lang_pt_level: "Nativo",
   lang_en_name: "Inglês",
-  lang_en_level: "C1 Avançado",
+  lang_en_level: "C2 Proficiente",
   lang_en_badge: "VER CERTIFICADO EFSET",
   lang_es_name: "Espanhol",
   lang_es_level: "Básico",
@@ -191,6 +191,17 @@ const pt: Dict = {
   theme_label: "Tema",
   lang_label: "Idioma",
   project_preview_placeholder: "PREVIEW EM BREVE",
+  /* Descrições dos projetos (títulos permanecem idênticos em ambos os idiomas). */
+  proj_crud_desc:
+    "Sistema web full-stack com autenticação de admin, gestão de múltiplas entidades, schema SQL versionado e documentação UML.",
+  proj_busca_desc:
+    "SPA em React usando Context API, React Router e consumo assíncrono de API REST. Publicado em produção.",
+  proj_java_desc:
+    "Exercícios práticos de POO cobrindo encapsulamento, herança, polimorfismo e interfaces.",
+  proj_dash_fin_desc:
+    "Dashboard em Power BI para fluxo de caixa pessoal e empresarial. Cartões de KPI, gráfico combinado por mês/tipo, donut por categoria, drilldown de categoria → subcategoria → fornecedor e tabela completa de transações.",
+  proj_dash_log_desc:
+    "Dashboard em Power BI acompanhando OTD (On Time Delivery), ranking de desvios de entrega, performance por transportadora e análise de causa raiz em 1.755 entregas em 2025.",
 };
 
 const dicts: Record<Lang, Dict> = { en, pt };
