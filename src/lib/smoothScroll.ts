@@ -26,10 +26,25 @@ export function smoothScrollTo(
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
-  target.scrollIntoView({
-    behavior: prefersReduced ? "auto" : "smooth",
-    block: "start",
-  });
+  // Compute target Y manually. Using window.scrollTo (rather than
+  // scrollIntoView) works reliably even when `html { overflow-x: hidden }`
+  // promotes <body> to the scroll container, which breaks native smooth
+  // scrollIntoView in some browsers.
+  const styles = window.getComputedStyle(target);
+  const marginTop = parseFloat(styles.scrollMarginTop || "0") || 0;
+  const rect = target.getBoundingClientRect();
+  const currentY =
+    window.pageYOffset ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop ||
+    0;
+  const top = rect.top + currentY - marginTop;
+
+  if (prefersReduced) {
+    window.scrollTo(0, top);
+  } else {
+    window.scrollTo({ top, behavior: "smooth" });
+  }
 
   // Keep the URL hash in sync without triggering the browser's
   // default instant jump.
