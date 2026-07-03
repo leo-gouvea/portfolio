@@ -16,6 +16,7 @@
 
 import { profile } from "@/data/site";
 import { useLang } from "@/lib/i18n";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
@@ -50,6 +51,7 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
+              onClick={(e) => smoothScrollTo(e, l.href)}
               className="font-display tracking-[0.18em] text-[11px] uppercase text-[color:var(--text)] opacity-80 hover:opacity-100 hover:text-[color:var(--primary)] transition-colors whitespace-nowrap"
             >
               {t(l.key)}
