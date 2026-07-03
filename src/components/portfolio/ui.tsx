@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 
 /* =============================================================
    SHARED UI PRIMITIVES
@@ -99,11 +100,13 @@ ${className}
 
   if (href) {
     const external = href.startsWith("http");
+    const internalHash = href.startsWith("#");
     return (
       <a
         href={href}
         target={external ? "_blank" : undefined}
         rel={external ? "noreferrer" : undefined}
+        onClick={internalHash ? (e) => smoothScrollTo(e, href) : undefined}
         aria-label={ariaLabel}
         className={cls}
       >

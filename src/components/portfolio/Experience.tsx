@@ -37,41 +37,31 @@ export function Experience() {
               .filter((l) => l.startsWith("•"))
               .map((l) => l.replace(/^•\s*/, ""));
             return (
-              <li key={e.roleKey} className="panel p-5">
-                <div className="flex gap-4 items-start">
+              <li key={e.roleKey} className="panel p-4 sm:p-5">
+                <div className="flex gap-3 sm:gap-4 items-start">
                   <img
                     src={e.logo}
                     alt={t(e.orgKey as never)}
-                    className="
-        w-14 h-14
-        object-cover
-        bg-white
-        border border-[color:var(--border)]
-        shrink-0
-      "
+                    className="w-10 h-10 sm:w-14 sm:h-14 object-cover bg-white border border-[color:var(--border)] shrink-0"
                   />
 
-                  <div className="flex-1">
-                    <h3 className="font-display text-lg">
-                      {t(e.roleKey as never)}{" "}
-                      <span className="text-[color:var(--primary)]">@ {t(e.orgKey as never)}</span>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-display text-base sm:text-lg leading-snug break-words">
+                      {t(e.roleKey as never)}
+                      <span className="block sm:inline text-[color:var(--primary)] sm:ml-1">
+                        <span className="hidden sm:inline">@ </span>
+                        {t(e.orgKey as never)}
+                      </span>
                     </h3>
 
-                    {intro && <p className="text-sm opacity-80 mt-2 leading-relaxed">{intro}</p>}
+                    {intro && <p className="text-sm opacity-80 mt-2 leading-relaxed break-words">{intro}</p>}
 
                     {bullets.length > 0 && (
                       <ul className="mt-3 space-y-1.5 text-sm opacity-85">
                         {bullets.map((b, i) => (
                           <li
                             key={i}
-                            className="
-                pl-4
-                relative
-                before:content-['▸']
-                before:absolute
-                before:left-0
-                before:text-[color:var(--secondary)]
-              "
+                            className="pl-4 relative break-words before:content-['▸'] before:absolute before:left-0 before:text-[color:var(--secondary)]"
                           >
                             {b}
                           </li>

@@ -16,6 +16,7 @@
 
 import { profile } from "@/data/site";
 import { useLang } from "@/lib/i18n";
+import { smoothScrollTo } from "@/lib/smoothScroll";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
@@ -34,7 +35,12 @@ export function Navbar() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[color:var(--surface-2)]/80 border-b border-[color:var(--border)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 grid grid-cols-[auto_1fr_auto] items-center gap-6">
-        <a href="#top" className="flex items-center gap-3 shrink-0" aria-label={profile.shortName}>
+        <a
+          href="#top"
+          onClick={(e) => smoothScrollTo(e, "#top")}
+          className="flex items-center gap-3 shrink-0"
+          aria-label={profile.shortName}
+        >
           <span className="grid place-items-center w-10 h-10 skew-tab bg-[color:var(--secondary)]">
             <span className="skew-tab-inner font-display text-[color:var(--bg)] text-xl leading-none">
               {profile.initials}
@@ -50,6 +56,7 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
+              onClick={(e) => smoothScrollTo(e, l.href)}
               className="font-display tracking-[0.18em] text-[11px] uppercase text-[color:var(--text)] opacity-80 hover:opacity-100 hover:text-[color:var(--primary)] transition-colors whitespace-nowrap"
             >
               {t(l.key)}

@@ -49,7 +49,9 @@ export const profile = {
 
 export type Project = {
   title: string;
-  desc: string;
+  /* i18n key resolved via useLang().t(descKey) — descriptions are
+     translated (EN/PT) while titles remain identical in both langs. */
+  descKey: string;
   tags: string[];
   repo?: string;
   demo?: string;
@@ -63,21 +65,21 @@ export const projects: { dev: Project[]; data: Project[] } = {
   dev: [
     {
       title: "Transportadora & Logística CRUD",
-      desc: "Full-stack web system with admin auth, multi-entity management, versioned SQL schema and UML documentation.",
+      descKey: "proj_crud_desc",
       tags: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
       repo: "https://github.com/leo-gouvea/transportadora-logistica-crud",
       image: crudImg,
     },
     {
       title: "Busca Filmes",
-      desc: "React SPA with Context API, React Router and async REST API consumption. Deployed to production.",
+      descKey: "proj_busca_desc",
       tags: ["React", "Context API", "REST API"],
       repo: "https://github.com/leo-gouvea/busca-filmes",
       image: buscaFilmesImg,
     },
     {
       title: "Java OOP Exercises",
-      desc: "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
+      descKey: "proj_java_desc",
       tags: ["Java", "OOP"],
       repo: "https://github.com/leo-gouvea/curso-devfullstackjr-prati/tree/main/Lista%20de%20Tarefas%207%20-%20Java%20OO",
       image: javaImg,
@@ -86,14 +88,14 @@ export const projects: { dev: Project[]; data: Project[] } = {
   data: [
     {
       title: "Dashboard Financeiro",
-      desc: "Power BI dashboard for personal/business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown by category → subcategory → supplier, full transaction table.",
+      descKey: "proj_dash_fin_desc",
       tags: ["Power BI", "DAX", "Cash Flow"],
       demo: "https://app.powerbi.com/groups/me/reports/8c7c3bcf-e798-4605-88b1-464b9fcf0f70/dc440fe2840368d246e1?experience=power-bi",
       image: dashboardFinanceiroImg,
     },
     {
       title: "Dashboard Logística & Transportes",
-      desc: "Power BI dashboard tracking OTD (On Time Delivery), delivery deviation ranking, carrier performance and root cause insights across 1,755 deliveries in 2025.",
+      descKey: "proj_dash_log_desc",
       tags: ["Power BI", "DAX", "KPI", "Logistics"],
       demo: "https://app.powerbi.com/groups/me/reports/2311d3dd-398f-4cc3-ba90-5f29be68628a/e8236f7c445a855810bc?experience=power-bi",
       image: dashboardLogisticaImg,
