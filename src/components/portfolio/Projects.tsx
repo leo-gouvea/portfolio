@@ -60,7 +60,7 @@ function ProjectCard({ p, tab }: { p: Project; tab: Tab }) {
 
       <div className="p-5 flex flex-col flex-1">
       <h3 className="font-display text-2xl leading-tight mb-2">{p.title}</h3>
-      <p className="text-sm opacity-80 leading-relaxed mb-4">{p.desc}</p>
+      <p className="text-sm opacity-80 leading-relaxed mb-4">{t(p.descKey as never)}</p>
 
       <ul className="flex flex-wrap gap-1.5 mb-4">
         {p.tags.map((tag) => (

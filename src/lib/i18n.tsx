@@ -44,7 +44,7 @@ const en: Dict = {
   section_languages: "LANGUAGES",
   section_contact: "CONTACT",
   about_body:
-    "Full-stack developer and automation engineer with hands-on experience in React, Python, Java, SQL, PHP and AI-powered automation with n8n and LLMs. Currently expanding into data analysis and Power BI. Interned at Cafezinho delivering a full automation pipeline in production. Working at Grupo Casas Bahia in logistics operations. Studying Systems Analysis & Development at FSA. C1 Advanced English.",
+    "Full-stack developer and automation engineer with hands-on experience in React, Python, Java, SQL, PHP and AI-powered automation with n8n and LLMs. Currently expanding into data analysis and Power BI. Interned at Cafezinho delivering a full automation pipeline in production. Working at Grupo Casas Bahia in logistics operations. Studying Systems Analysis & Development at FSA. C2 Proficient English.",
   about_focus_label: "ANALYSIS TOOLS",
   about_focus: "Data Analytics · Power BI · DAX · ERP TOTVS RM",
   about_stack_label: "CORE STACK",
@@ -101,6 +101,17 @@ const en: Dict = {
   theme_label: "Theme",
   lang_label: "Language",
   project_preview_placeholder: "PREVIEW COMING SOON",
+  /* Project descriptions (translated; titles remain identical in both langs). */
+  proj_crud_desc:
+    "Full-stack web system with admin authentication, multi-entity management, versioned SQL schema and UML documentation.",
+  proj_busca_desc:
+    "React SPA using Context API, React Router and async REST API consumption. Deployed to production.",
+  proj_java_desc:
+    "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
+  proj_dash_fin_desc:
+    "Power BI dashboard for personal and business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown from category → subcategory → supplier, plus a full transaction table.",
+  proj_dash_log_desc:
+    "Power BI dashboard tracking OTD (On Time Delivery), delivery deviation ranking, carrier performance and root-cause insights across 1,755 deliveries in 2025.",
 };
 
 const pt: Dict = {
@@ -128,7 +139,7 @@ const pt: Dict = {
   section_languages: "IDIOMAS",
   section_contact: "CONTATO",
   about_body:
-    "Desenvolvedor full-stack e engenheiro de automação com experiência prática em React, Python, Java, SQL e automações com IA usando n8n e LLMs. Expandindo atualmente para análise de dados e Power BI. Estagiou no Cafezinho entregando um pipeline completo de automação em produção. Atua no Grupo Casas Bahia em operações logísticas. Cursando Análise e Desenvolvimento de Sistemas na FSA. Inglês C1 Avançado.",
+    "Desenvolvedor full-stack e engenheiro de automação com experiência prática em React, Python, Java, SQL e automações com IA usando n8n e LLMs. Expandindo atualmente para análise de dados e Power BI. Estagiou no Cafezinho entregando um pipeline completo de automação em produção. Atua no Grupo Casas Bahia em operações logísticas. Cursando Análise e Desenvolvimento de Sistemas na FSA. Inglês C2 Proficiente.",
   about_focus_label: "FERRAMENTAS DE ANÁLISE",
   about_focus: "Análise de Dados · Power BI · DAX · ERP TOTVS RM",
   about_stack_label: "STACK PRINCIPAL",
@@ -180,6 +191,17 @@ const pt: Dict = {
   theme_label: "Tema",
   lang_label: "Idioma",
   project_preview_placeholder: "PREVIEW EM BREVE",
+  /* Descrições dos projetos (títulos permanecem idênticos em ambos os idiomas). */
+  proj_crud_desc:
+    "Sistema web full-stack com autenticação de admin, gestão de múltiplas entidades, schema SQL versionado e documentação UML.",
+  proj_busca_desc:
+    "SPA em React usando Context API, React Router e consumo assíncrono de API REST. Publicado em produção.",
+  proj_java_desc:
+    "Exercícios práticos de POO cobrindo encapsulamento, herança, polimorfismo e interfaces.",
+  proj_dash_fin_desc:
+    "Dashboard em Power BI para fluxo de caixa pessoal e empresarial. Cartões de KPI, gráfico combinado por mês/tipo, donut por categoria, drilldown de categoria → subcategoria → fornecedor e tabela completa de transações.",
+  proj_dash_log_desc:
+    "Dashboard em Power BI acompanhando OTD (On Time Delivery), ranking de desvios de entrega, performance por transportadora e análise de causa raiz em 1.755 entregas em 2025.",
 };
 
 const dicts: Record<Lang, Dict> = { en, pt };

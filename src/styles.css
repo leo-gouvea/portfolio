@@ -137,6 +137,14 @@
     html, body { scroll-behavior: auto; }
   }
 
+  /* Offset in-page anchor jumps so section titles are not hidden
+     behind the fixed 64px navbar. Applies to any element that can
+     be targeted from the nav. */
+  section[id],
+  [id="top"] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     background-color: var(--bg);
     color: var(--text);
