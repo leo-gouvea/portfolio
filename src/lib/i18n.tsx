@@ -198,6 +198,8 @@ const pt: Dict = {
     "SPA em React usando Context API, React Router e consumo assíncrono de API REST. Publicado em produção.",
   proj_java_desc:
     "Exercícios práticos de POO cobrindo encapsulamento, herança, polimorfismo e interfaces.",
+  proj_fundo_desc: 
+     "Gerador de fundos animados em HTML e CSS usando IA. O usuário descreve o fundo desejado e recebe o código gerado em tempo real via integração com n8n e Groq API.",
   proj_dash_fin_desc:
     "Dashboard em Power BI para fluxo de caixa pessoal e empresarial. Cartões de KPI, gráfico combinado por mês/tipo, donut por categoria, drilldown de categoria → subcategoria → fornecedor e tabela completa de transações.",
   proj_dash_log_desc:
