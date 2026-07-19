@@ -22,7 +22,7 @@ import dashboardLogisticaImg from "@/assets/images/dashboardLogisticaImg.png";
 import buscaFilmesImg from "@/assets/images/buscaFilmesGif.gif";
 import crudImg from "@/assets/images/crudImg.png";
 import javaImg from "@/assets/images/javaImg.png";
-import fundoMagicoImg from "@/assets/fundoMagicoImg.gif";
+import fundoMagicoImg from "@/assets/images/fundoMagicoImg.gif";
 import clubemescLogo from "@/assets/logos/clubemesc_logo.jpg";
 import etecLogo from "@/assets/logos/eteclaurogomes_logo.jpg";
 import fsaLogo from "@/assets/logos/fsaoficial_logo.jpg";
