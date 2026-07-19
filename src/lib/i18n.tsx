@@ -108,6 +108,8 @@ const en: Dict = {
     "React SPA using Context API, React Router and async REST API consumption. Deployed to production.",
   proj_java_desc:
     "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
+   proj_fundo_desc: 
+    "An AI-powered HTML and CSS animated background generator. Users describe their desired background and receive the generated code in real-time through an integration with n8n and the Groq API.",
   proj_dash_fin_desc:
     "Power BI dashboard for personal and business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown from category → subcategory → supplier, plus a full transaction table.",
   proj_dash_log_desc:
