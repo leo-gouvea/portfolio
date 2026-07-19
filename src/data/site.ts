@@ -84,6 +84,14 @@ export const projects: { dev: Project[]; data: Project[] } = {
       repo: "https://github.com/leo-gouvea/curso-devfullstackjr-prati/tree/main/Lista%20de%20Tarefas%207%20-%20Java%20OO",
       image: javaImg,
     },
+     {
+      title: "Fundo Mágico",
+      descKey: "proj_fundo_desc",
+      tags: ["JavaScript", "n8n", "Groq API", "HTML", "CSS"],
+      repo: "https://github.com/leo-gouvea/magical-background-ai",
+      demo: "https://magical-background-ai.vercel.app/",
+      image: fundoMagicoImg,
+},
   ],
   data: [
     {
