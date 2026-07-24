@@ -19,6 +19,7 @@
 
 import dashboardFinanceiroImg from "@/assets/images/dashboardFinanceiroImg.png";
 import dashboardLogisticaImg from "@/assets/images/dashboardLogisticaImg.png";
+import customerAnalysisImg from "@/assets/images/customerAnalysisImg.png";
 import buscaFilmesImg from "@/assets/images/buscaFilmesGif.gif";
 import crudImg from "@/assets/images/crudImg.png";
 import javaImg from "@/assets/images/javaImg.png";
