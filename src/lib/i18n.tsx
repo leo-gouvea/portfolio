@@ -114,6 +114,8 @@ const en: Dict = {
     "Power BI dashboard for personal and business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown from category → subcategory → supplier, plus a full transaction table.",
   proj_dash_log_desc:
     "Power BI dashboard tracking OTD (On Time Delivery), delivery deviation ranking, carrier performance and root-cause insights across 1,755 deliveries in 2025.",
+  proj_customer_desc:
+  "End-to-end data analytics project covering data cleaning with Python, SQL analysis in PostgreSQL and an interactive Power BI dashboard to uncover customer shopping behavior and business insights.",
 };
 
 const pt: Dict = {
@@ -206,6 +208,8 @@ const pt: Dict = {
     "Dashboard em Power BI para fluxo de caixa pessoal e empresarial. Cartões de KPI, gráfico combinado por mês/tipo, donut por categoria, drilldown de categoria → subcategoria → fornecedor e tabela completa de transações.",
   proj_dash_log_desc:
     "Dashboard em Power BI acompanhando OTD (On Time Delivery), ranking de desvios de entrega, performance por transportadora e análise de causa raiz em 1.755 entregas em 2025.",
+  proj_customer_desc:
+  "Projeto completo de análise de dados envolvendo limpeza de dados com Python, consultas SQL em PostgreSQL e um dashboard interativo no Power BI para identificar padrões de comportamento de clientes e gerar insights de negócio.",
 };
 
 const dicts: Record<Lang, Dict> = { en, pt };
