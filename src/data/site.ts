@@ -99,16 +99,24 @@ export const projects: { dev: Project[]; data: Project[] } = {
       title: "Dashboard Financeiro",
       descKey: "proj_dash_fin_desc",
       tags: ["Power BI", "DAX", "Cash Flow"],
-      demo: "https://app.powerbi.com/groups/me/reports/8c7c3bcf-e798-4605-88b1-464b9fcf0f70/dc440fe2840368d246e1?experience=power-bi",
+      demo: "https://app.powerbi.com/view?r=eyJrIjoiMjg5MzJmMjgtZTg0My00MGMyLWEyOTctNTliMmI2YjZkM2VhIiwidCI6Ijg4ZDAwMzRjLTViNDctNGNkNy1iOTU2LTk0NjdlODY2MjM3NyJ9",
       image: dashboardFinanceiroImg,
     },
     {
       title: "Dashboard Logística & Transportes",
       descKey: "proj_dash_log_desc",
       tags: ["Power BI", "DAX", "KPI", "Logistics"],
-      demo: "https://app.powerbi.com/groups/me/reports/2311d3dd-398f-4cc3-ba90-5f29be68628a/e8236f7c445a855810bc?experience=power-bi",
+      demo: "https://app.powerbi.com/view?r=eyJrIjoiNTc5MTEwZWYtNTgwOC00MTllLTkxMTgtMGY3MDc4NDc5Y2ZhIiwidCI6Ijg4ZDAwMzRjLTViNDctNGNkNy1iOTU2LTk0NjdlODY2MjM3NyJ9",
       image: dashboardLogisticaImg,
     },
+   {
+    title: "Customer Shopping Behavior Analysis",
+    descKey: "proj_customer_desc",
+    tags: ["Python", "SQL", "PostgreSQL", "Power BI", "Pandas"],
+    repo: "https://github.com/leo-gouvea/customer-shopping-behavior-analysis",
+    demo: "https://app.powerbi.com/view?r=eyJrIjoiY2UzNWIyZmMtNzJhMS00YWQwLWI4OWEtMGM3OGIzNDI4NmJhIiwidCI6Ijg4ZDAwMzRjLTViNDctNGNkNy1iOTU2LTk0NjdlODY2MjM3NyJ9&embedImagePlaceholder=true",
+    image: customerAnalysisImg,
+  },
   ],
 };
 
