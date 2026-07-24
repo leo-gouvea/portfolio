@@ -97,6 +97,14 @@ export const projects: { dev: Project[]; data: Project[] } = {
   ],
   data: [
     {
+    title: "Customer Shopping Behavior Analysis",
+    descKey: "proj_customer_desc",
+    tags: ["Python", "SQL", "PostgreSQL", "Power BI", "Pandas"],
+    repo: "https://github.com/leo-gouvea/customer-behavior-data-analysis",
+    demo: "https://app.powerbi.com/view?r=eyJrIjoiY2UzNWIyZmMtNzJhMS00YWQwLWI4OWEtMGM3OGIzNDI4NmJhIiwidCI6Ijg4ZDAwMzRjLTViNDctNGNkNy1iOTU2LTk0NjdlODY2MjM3NyJ9&embedImagePlaceholder=true",
+    image: customerAnalysisImg,
+    },
+    {
       title: "Dashboard Financeiro",
       descKey: "proj_dash_fin_desc",
       tags: ["Power BI", "DAX", "Cash Flow"],
@@ -110,14 +118,6 @@ export const projects: { dev: Project[]; data: Project[] } = {
       demo: "https://app.powerbi.com/view?r=eyJrIjoiNTc5MTEwZWYtNTgwOC00MTllLTkxMTgtMGY3MDc4NDc5Y2ZhIiwidCI6Ijg4ZDAwMzRjLTViNDctNGNkNy1iOTU2LTk0NjdlODY2MjM3NyJ9",
       image: dashboardLogisticaImg,
     },
-   {
-    title: "Customer Shopping Behavior Analysis",
-    descKey: "proj_customer_desc",
-    tags: ["Python", "SQL", "PostgreSQL", "Power BI", "Pandas"],
-    repo: "https://github.com/leo-gouvea/customer-shopping-behavior-analysis",
-    demo: "https://app.powerbi.com/view?r=eyJrIjoiY2UzNWIyZmMtNzJhMS00YWQwLWI4OWEtMGM3OGIzNDI4NmJhIiwidCI6Ijg4ZDAwMzRjLTViNDctNGNkNy1iOTU2LTk0NjdlODY2MjM3NyJ9&embedImagePlaceholder=true",
-    image: customerAnalysisImg,
-  },
   ],
 };
 
