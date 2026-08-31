@@ -52,5 +52,9 @@ export function smoothScrollTo(
   // default instant jump.
   if (window.history && window.history.replaceState) {
     window.history.replaceState(null, "", `#${id}`);
+    // replaceState changes the URL but does not fire a native
+    // hashchange event. Projects listens to that event to keep its
+    // Dev/Data tab synchronized with navigation buttons elsewhere.
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
   }
 }

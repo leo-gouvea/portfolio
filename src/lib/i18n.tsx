@@ -111,7 +111,7 @@ const en: Dict = {
    proj_fundo_desc: 
     "An AI-powered HTML and CSS animated background generator. Users describe their desired background and receive the generated code in real-time through an integration with n8n and the Groq API.",
   proj_entrelinhas_desc:
-    "Interactive quiz game focused on Portuguese literature, built as a lightweight web experience with immediate feedback and a playful interface.",
+    "Interactive quiz about feminism, social movements, and everyday situations, designed to turn social reflection into a lightweight, engaging web experience. Built with vanilla HTML, CSS, and JavaScript, it combines native browser audio, Canvas API-generated shareable visuals, and Google Sheets + Apps Script for lightweight statistics. The deliberately dependency-free architecture runs as a fully static site on GitHub Pages — simple by design, but engineered for portability, maintainability, and zero backend infrastructure.",
   proj_dash_fin_desc:
     "Power BI dashboard for personal and business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown from category → subcategory → supplier, plus a full transaction table.",
   proj_dash_log_desc:
@@ -207,7 +207,7 @@ const pt: Dict = {
   proj_fundo_desc: 
      "Gerador de fundos animados em HTML e CSS usando IA. O usuário descreve o fundo desejado e recebe o código gerado em tempo real via integração com n8n e Groq API.",
   proj_entrelinhas_desc:
-    "Jogo de quiz interativo sobre literatura portuguesa, desenvolvido como uma experiência web leve, com feedback imediato e uma interface descontraída.",
+    "Quiz interativo sobre feminismo, movimentos sociais e situações do cotidiano, criado para transformar reflexão social em uma experiência web leve e envolvente. Desenvolvido com HTML, CSS e JavaScript puro, combina áudio nativo do navegador, Canvas API para gerar imagens compartilháveis e Google Sheets + Apps Script para estatísticas sem infraestrutura de backend. A arquitetura deliberadamente livre de dependências roda como um site totalmente estático no GitHub Pages — simples por escolha, mas pensada para portabilidade, manutenção e baixa complexidade.",
   proj_dash_fin_desc:
     "Dashboard em Power BI para fluxo de caixa pessoal e empresarial. Cartões de KPI, gráfico combinado por mês/tipo, donut por categoria, drilldown de categoria → subcategoria → fornecedor e tabela completa de transações.",
   proj_dash_log_desc:
