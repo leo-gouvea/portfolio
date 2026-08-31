@@ -18,7 +18,9 @@ export function smoothScrollTo(
 ): void {
   if (typeof window === "undefined") return;
   const id = hash.startsWith("#") ? hash.slice(1) : hash;
-  const target = id ? document.getElementById(id) : null;
+  const targetId =
+    id === "projects-dev" || id === "projects-data" ? "projects" : id;
+  const target = targetId ? document.getElementById(targetId) : null;
   if (!target) return;
   event.preventDefault();
 

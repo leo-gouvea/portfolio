@@ -24,6 +24,7 @@ import buscaFilmesImg from "@/assets/images/buscaFilmesGif.gif";
 import crudImg from "@/assets/images/crudImg.png";
 import javaImg from "@/assets/images/javaImg.png";
 import fundoMagicoImg from "@/assets/images/fundoMagicoImg.gif";
+import entrelinhasImg from "@/assets/images/entrelinhas.gif";
 import clubemescLogo from "@/assets/logos/clubemesc_logo.jpg";
 import etecLogo from "@/assets/logos/eteclaurogomes_logo.jpg";
 import fsaLogo from "@/assets/logos/fsaoficial_logo.jpg";
@@ -94,6 +95,14 @@ export const projects: { dev: Project[]; data: Project[] } = {
       demo: "https://magical-background-ai.vercel.app/",
       image: fundoMagicoImg,
 },
+    {
+      title: "Entrelinhas",
+      descKey: "proj_entrelinhas_desc",
+      tags: ["JavaScript", "HTML", "CSS", "Quiz"],
+      repo: "https://github.com/leo-gouvea/entrelinhas-quiz",
+      demo: "https://leo-gouvea.github.io/entrelinhas-quiz/",
+      image: entrelinhasImg,
+    },
   ],
   data: [
     {

@@ -15,7 +15,7 @@
                              `BarChart3` (data)
    ============================================================= */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BarChart3, CodeXml, ImageOff } from "lucide-react";
 import { projects, type Project } from "@/data/site";
 import { useLang } from "@/lib/i18n";
@@ -94,7 +94,22 @@ function ProjectCard({ p, tab }: { p: Project; tab: Tab }) {
    - Project entries: src/data/site.ts -> projects.dev / projects.data */
 export function Projects() {
   const { t } = useLang();
-  const [tab, setTab] = useState<Tab>("dev");
+  const [tab, setTab] = useState<Tab>(() => {
+    if (typeof window === "undefined") return "dev";
+    return window.location.hash === "#projects-data" ? "data" : "dev";
+  });
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === "#projects-data") setTab("data");
+      if (window.location.hash === "#projects-dev") setTab("dev");
+    };
+
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   const list = projects[tab];
 
   return (
@@ -110,7 +125,12 @@ export function Projects() {
               key={id}
               role="tab"
               aria-selected={tab === id}
-              onClick={() => setTab(id)}
+              onClick={() => {
+                setTab(id);
+                if (window.history?.replaceState) {
+                  window.history.replaceState(null, "", id === "dev" ? "#projects-dev" : "#projects-data");
+                }
+              }}
               className={`skew-tab px-6 py-3 font-display tracking-[0.25em] text-sm transition-all ${
                 tab === id
                   ? "bg-[color:var(--secondary)] text-[color:var(--bg)]"

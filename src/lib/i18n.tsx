@@ -110,6 +110,8 @@ const en: Dict = {
     "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
    proj_fundo_desc: 
     "An AI-powered HTML and CSS animated background generator. Users describe their desired background and receive the generated code in real-time through an integration with n8n and the Groq API.",
+  proj_entrelinhas_desc:
+    "Interactive quiz game focused on Portuguese literature, built as a lightweight web experience with immediate feedback and a playful interface.",
   proj_dash_fin_desc:
     "Power BI dashboard for personal and business cash flow. KPI cards, combo chart by month/type, donut by category, drilldown from category → subcategory → supplier, plus a full transaction table.",
   proj_dash_log_desc:
@@ -204,6 +206,8 @@ const pt: Dict = {
     "Exercícios práticos de POO cobrindo encapsulamento, herança, polimorfismo e interfaces.",
   proj_fundo_desc: 
      "Gerador de fundos animados em HTML e CSS usando IA. O usuário descreve o fundo desejado e recebe o código gerado em tempo real via integração com n8n e Groq API.",
+  proj_entrelinhas_desc:
+    "Jogo de quiz interativo sobre literatura portuguesa, desenvolvido como uma experiência web leve, com feedback imediato e uma interface descontraída.",
   proj_dash_fin_desc:
     "Dashboard em Power BI para fluxo de caixa pessoal e empresarial. Cartões de KPI, gráfico combinado por mês/tipo, donut por categoria, drilldown de categoria → subcategoria → fornecedor e tabela completa de transações.",
   proj_dash_log_desc:
