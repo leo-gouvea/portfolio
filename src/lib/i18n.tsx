@@ -109,7 +109,7 @@ const en: Dict = {
   proj_java_desc:
     "Practical OOP exercises covering encapsulation, inheritance, polymorphism and interfaces.",
    proj_fundo_desc: 
-    "An AI-powered HTML and CSS animated background generator. Users describe their desired background and receive the generated code in real-time through an integration with n8n and the Groq API.",
+    "An AI-powered generator for animated backgrounds using HTML and CSS. The user describes the desired background and receives the generated code in real time. It originally ran on a pipeline via n8n; it was later migrated to a serverless function after the second infrastructure outage to eliminate the reliance on a hosting trial once and for all.",
   proj_entrelinhas_desc:
     "Interactive quiz about feminism, social movements, and everyday situations, designed to turn social reflection into a lightweight, engaging web experience. Built with vanilla HTML, CSS, and JavaScript, it combines native browser audio, Canvas API-generated shareable visuals, and Google Sheets + Apps Script for lightweight statistics. The deliberately dependency-free architecture runs as a fully static site on GitHub Pages — simple by design, but engineered for portability, maintainability, and zero backend infrastructure.",
   proj_dash_fin_desc:
@@ -205,7 +205,7 @@ const pt: Dict = {
   proj_java_desc:
     "Exercícios práticos de POO cobrindo encapsulamento, herança, polimorfismo e interfaces.",
   proj_fundo_desc: 
-     "Gerador de fundos animados em HTML e CSS usando IA. O usuário descreve o fundo desejado e recebe o código gerado em tempo real via integração com n8n e Groq API.",
+     "Gerador de fundos animados em HTML e CSS usando IA. O usuário descreve o fundo desejado e recebe o código gerado em tempo real. Rodava com pipeline via n8n; migrado depois para função serverless após a segunda queda de infraestrutura, para eliminar de vez a dependência de trial de hospedagem.",
   proj_entrelinhas_desc:
     "Quiz interativo sobre feminismo, movimentos sociais e situações do cotidiano, criado para transformar reflexão social em uma experiência web leve e envolvente. Desenvolvido com HTML, CSS e JavaScript puro, combina áudio nativo do navegador, Canvas API para gerar imagens compartilháveis e Google Sheets + Apps Script para estatísticas sem infraestrutura de backend. A arquitetura deliberadamente livre de dependências roda como um site totalmente estático no GitHub Pages — simples por escolha, mas pensada para portabilidade, manutenção e baixa complexidade.",
   proj_dash_fin_desc:
