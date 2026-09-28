@@ -27,6 +27,7 @@ import fundoMagicoImg from "@/assets/images/fundoMagicoImg.gif";
 import entrelinhasImg from "@/assets/images/entrelinhas.gif";
 import clubemescLogo from "@/assets/logos/clubemesc_logo.jpg";
 import etecLogo from "@/assets/logos/eteclaurogomes_logo.jpg";
+import anhembiLogo from "@/assets/logos/anhembimorumbi_logo.jpg";
 import fsaLogo from "@/assets/logos/fsaoficial_logo.jpg";
 import casasbahiaLogo from "@/assets/logos/grupocasasbahia_logo.jpg";
 import proaLogo from "@/assets/logos/instituto_proa_logo.jpg";
@@ -150,6 +151,7 @@ export type EducationItem = {
 };
 
 export const education: EducationItem[] = [
+  { titleKey: "edu_bsi_title",   orgKey: "edu_bsi_org",   date: "Sep 2026 – Jul 2029", logo: anhembiLogo },
   { titleKey: "edu_ads_title",   orgKey: "edu_ads_org",   date: "Feb 2025 – Dec 2026", logo: fsaLogo },
   { titleKey: "edu_prati_title", orgKey: "edu_prati_org", date: "Apr 2025 – Nov 2025", logo: pratiLogo },
   { titleKey: "edu_etec_title",  orgKey: "edu_etec_org",  date: "Feb 2022 – Dec 2024", logo: etecLogo },
