@@ -151,7 +151,7 @@ export type EducationItem = {
 };
 
 export const education: EducationItem[] = [
-  { titleKey: "edu_bsi_title",   orgKey: "edu_bsi_org",   date: "Sep 2026 – Jul 2029", logo: anhembiLogo },
+  { titleKey: "edu_bsi_title",   orgKey: "edu_bsi_org",   date: "Sep 2026 – Dec 2028", logo: anhembiLogo },
   { titleKey: "edu_ads_title",   orgKey: "edu_ads_org",   date: "Feb 2025 – Dec 2026", logo: fsaLogo },
   { titleKey: "edu_prati_title", orgKey: "edu_prati_org", date: "Apr 2025 – Nov 2025", logo: pratiLogo },
   { titleKey: "edu_etec_title",  orgKey: "edu_etec_org",  date: "Feb 2022 – Dec 2024", logo: etecLogo },
